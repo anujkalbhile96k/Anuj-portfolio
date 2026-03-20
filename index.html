@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Anuj Krushna Kalbhile | CSE Portfolio</title>
+
+  <!-- Google Fonts: Syne (display) + DM Sans (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-brand">
+      <!-- Logo initials -->
+      <span class="logo-text">Ak<span class="accent">.</span></span>
+    </div>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home"    class="nav-link active">Home</a></li>
+      <li><a href="#about"   class="nav-link">About</a></li>
+      <li><a href="#modules" class="nav-link">Modules</a></li>
+      <li><a href="#projects"class="nav-link">Projects</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <!-- Dark / Light Mode Toggle -->
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <span class="toggle-icon sun"><i class="fa-solid fa-sun"></i></span>
+        <span class="toggle-icon moon"><i class="fa-solid fa-moon"></i></span>
+      </button>
+
+      <!-- Hamburger Menu (mobile) -->
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO / HOME SECTION ===== -->
+  <section class="hero" id="home">
+    <!-- Decorative animated blobs -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+
+    <div class="hero-container">
+      <!-- Left: text content -->
+      <div class="hero-text">
+        <p class="hero-greeting">Hello, I'm</p>
+        <h5 class="hero-name">Anuj Krushna<br/><span class="accent">Kalbhile</span></h5>
+        <p class="hero-role">
+          <span class="typed-text" id="typedText"></span>
+          <span class="cursor">|</span>
+        </p>
+        <p class="hero-bio">
+          Computer Science &amp; Engineering student at <strong>SSGMCE Shegaon</strong>.
+          Passionate about FabLab fabrication, embedded systems, and building things
+          that bridge the digital and physical worlds.
+        </p>
+
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="#contact"  class="btn btn-outline">Contact Me</a>
+        </div>
+
+        <!-- Quick stats -->
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-number">10</span>
+            <span class="stat-label">Modules</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-number">2</span>
+            <span class="stat-label">Projects</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-number">CSE</span>
+            <span class="stat-label">Department</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: profile photo placeholder -->
+      <div class="hero-photo-wrap">
+        <div class="hero-photo-ring">
+          <div class="hero-photo-inner">
+            <!-- Replace src with your own photo -->
+            <img
+              src="Photo.jpeg"
+              alt="Anuj Krushna Kalbhile"
+              class="hero-photo"
+              id="profilePhoto"
+              onerror="this.style.display='none'; document.getElementById('photoPlaceholder').style.display='flex';"
+            />
+            <!-- Placeholder shown when no photo is provided -->
+           
+          </div>
+        </div>
+        <!-- Floating tech tags around photo -->
+        <span class="float-tag tag-1">Web<br> Developer</span>
+        <span class="float-tag tag-2">IoT</span>
+        <span class="float-tag tag-3">3D Print</span>
+        <span class="float-tag tag-4">PCB</span>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator">
+      <span>Scroll</span>
+      <i class="fa-solid fa-chevron-down"></i>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Who I Am</span>
+        <h2 class="section-title">About <span class="accent">Me</span></h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-card glass-card">
+          <div class="about-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+          <h3>Education</h3>
+          <p>B.E. in Computer Science &amp; Engineering</p>
+          <p class="muted">SSGMCE Shegaon, Maharashtra</p>
+        </div>
+        <div class="about-card glass-card">
+          <div class="about-icon"><i class="fa-solid fa-flask"></i></div>
+          <h3>FabLab</h3>
+          <p>Hands-on fabrication, prototyping &amp; digital manufacturing at the college FabLab.</p>
+        </div>
+        <div class="about-card glass-card">
+          <div class="about-icon"><i class="fa-solid fa-code"></i></div>
+          <h3>Skills</h3>
+          <p>· Web Dev · Embedded Systems · CAD · PCB Design · AI / ML · IoT</p>
+        </div>
+        <div class="about-card glass-card">
+          <div class="about-icon"><i class="fa-solid fa-lightbulb"></i></div>
+          <h3>Interests</h3>
+          <p>Robotics · Open Source · Laser Fabrication · Networking · Machine Learning</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+<!-- ===== PROFILE CARD SECTION ===== -->
+<section class="profile-card-section section">
+  <div class="container">
+
+    <div class="profile-card glass-card">
+
+      <!-- LEFT SIDE: Photo -->
+      <div class="pc-photo-side">
+        <div class="pc-photo-wrap">
+          <!-- Replace 'your-photo.jpg' with your actual photo file name -->
+          <img
+            src="photo2.jpeg"
+            alt="Anuj Krushna Kalbhile"
+            class="pc-photo"
+            onerror="this.style.display='none'; document.getElementById('pcPhotoPlaceholder').style.display='flex';"
+          />
+          <!-- Shown when no photo file found -->
+          <div class="pc-photo-placeholder" id="pcPhotoPlaceholder">
+            <i class="fa-solid fa-user"></i>
+          </div>
+        </div>
+        <!-- Name & title below photo -->
+        <h3 class="pc-name">Anuj Krushna Kalbhile</h3>
+        <p class="pc-role">CSE Student · SSGMCE Shegaon</p>
+      </div>
+
+      <!-- DIVIDER LINE between left and right -->
+      <div class="pc-divider"></div>
+
+      <!-- RIGHT SIDE: Info + Resume Download -->
+      <div class="pc-info-side">
+
+        <!-- Short bio / intro -->
+        <h2 class="pc-heading">Know More <span class="accent">About Me</span></h2>
+        <p class="pc-bio">
+          I am a Computer Science &amp; Engineering student at SSGMCE Shegaon, 
+          passionate about FabLab fabrication, embedded systems, web development, 
+          and building projects that connect the digital and physical world.
+          Currently learning 10 modules at the college FabLab.
+        </p>
+
+        <!-- Key details list -->
+        <ul class="pc-details">
+          <li>
+            <span class="pc-detail-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+            <span class="pc-detail-label">Degree</span>
+            <span class="pc-detail-value">B.E. Computer Science &amp; Engineering</span>
+          </li>
+          <li>
+            <span class="pc-detail-icon"><i class="fa-solid fa-building-columns"></i></span>
+            <span class="pc-detail-label">College</span>
+            <span class="pc-detail-value">SSGMCE Shegaon, Maharashtra</span>
+          </li>
+          <li>
+            <span class="pc-detail-icon"><i class="fa-solid fa-flask"></i></span>
+            <span class="pc-detail-label">Lab</span>
+            <span class="pc-detail-value">FabLab — Digital Fabrication</span>
+          </li>
+          <li>
+            <span class="pc-detail-icon"><i class="fa-solid fa-location-dot"></i></span>
+            <span class="pc-detail-label">Location</span>
+            <span class="pc-detail-value">Shegaon, Maharashtra, India</span>
+          </li>
+        </ul>
+    
+          <a href="resume.pdf" class="btn btn-primary" download="resume.pdf">Download Resume</a>
+        </a>
+      </div><!-- /pc-info-side -->
+
+    </div><!-- /profile-card -->
+
+  </div>
+</section>
+<!-- ===== END PROFILE CARD SECTION ===== -->
+
+  
+
+  <!-- ===== MODULES SECTION ===== -->
+  <section class="modules section" id="modules">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">FabLab Learning</span>
+        <h2 class="section-title">My <span class="accent">Modules</span></h2>
+        <p class="section-subtitle">Documentation of all 10 modules I am learning at FabLab — updated week by week.</p>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="module-filters">
+        <button class="filter-btn active" data-filter="all">All Modules</button>
+        <button class="filter-btn" data-filter="hardware">Hardware</button>
+        <button class="filter-btn" data-filter="software">Software</button>
+        <button class="filter-btn" data-filter="design">Design</button>
+      </div>
+
+      <!-- Module Cards Grid -->
+      <div class="modules-grid" id="modulesGrid">
+
+        <!-- Module 1: Web Development -->
+        <div class="module-card glass-card" data-category="software">
+          
+          <a href="web.html" class="card-link">
+          <div class="module-header">
+            <div class="module-icon-wrap" style="--clr:#00c6ff">
+              <i class="fa-solid fa-globe"></i>
+            </div>
+            <span class="module-number">01</span>
+          </div>
+          <h3 class="module-title">Web Development</h3><br>
+
+          
+          
+          <div class="module-meta">
+            <span class="module-date"><i class="fa-regular fa-calendar"></i> Jan 2025 – Present</span>
+          </div>
+          <div class="module-topics">
+            <span class="topic-tag">HTML5</span>
+            <span class="topic-tag">CSS3</span>
+            <span class="topic-tag">JavaScript</span>
+            <span class="topic-tag">Responsive Design</span>
+          </div>
+          <p class="module-desc">
+          
+            Building modern, responsive web pages. Learning HTML structure, CSS styling,
+            JavaScript interactivity and web hosting fundamentals.
+          </p></a>
+          <div class="module-progress">
+            <span>Progress</span>
+            <div class="progress-bar"><div class="progress-fill" style="--pct:80%"></div></div>
+            <span class="pct-label">100%</span>
+
+          </div>
+        </div>
+        
+
+        <!-- Module 2: CAD Design -->
+        <div class="module-card glass-card" data-category="design">
+           <a href="cad.html" class="card-link">
+          <div class="module-header">
+            <div class="module-icon-wrap" style="--clr:#f7971e">
+              <i class="fa-solid fa-drafting-compass"></i>
+            </div>
+            <span class="module-number">02</span>
+          </div>
+          <h3 class="module-title">CAD Design</h3><br>
+          <div class="module-meta">
+            <span class="module-date"><i class="fa-regular fa-calendar"></i> Feb 2025</span>
+             <span class="badge-upcoming">Upcoming</span>
+          </div>
+          <div class="module-topics">
+            <span class="topic-tag">Fusion 360</span>
+            <span class="topic-tag">FreeCAD</span>
+            <span class="topic-tag">2D/3D Modeling</span>
+          </div>
+          <p class="module-desc">
+            Learning computer-aided design to create precise 2D drawings and 3D solid models
+            for fabrication and prototyping.
+          </p></a>
+          <div class="module-progress">
+            <span>Progress</span>
+            <div class="progress-bar"><div class="progress-fill" style="--pct:0%"></div></div>
+            <span class="pct-label">0%</span>
+          </div>
+        </div>
+
+        <!-- Module 3: 3D Printing -->
+        <div class="module-card glass-card" data-category="hardware">
+
+           <a href="printing.html" class="card-link">
+          <div class="module-header">
+            <div class="module-icon-wrap" style="--clr:#11998e">
+              <i class="fa-solid fa-cube"></i>
+            </div>
+            <span class="module-number">03</span>
+          </div>
+          <h3 class="module-title">3D Printing</h3><br>
+          <div class="module-meta">
+            <span class="module-date"><i class="fa-regular fa-calendar"></i> Feb 2025</span>
+             <span class="badge-upcoming">Upcoming</span>
+          </div>
+          <div class="module-topics">
+            <span class="topic-tag">FDM Printing</span>
+            <span class="topic-tag">Slicing</span>
+            <span class="topic-tag">PLA/ABS</span>
+          </div>
+          <p class="module-desc">
+            Operating FDM 3D printers, slicing models, choosing materials, and post-processing
+            printed parts for functional prototypes.
+          </p></a>
+         <div class="module-progress">
+            <span>Progress</span>
+            <div class="progress-bar"><div class="progress-fill" style="--pct:0%"></div></div>
+            <span class="pct-label">0%</span>
+          </div>
+        </div>
+
+        <!-- Module 4: Laser Cutting -->
+        <div class="module-card glass-card" data-category="hardware">
+
+           <a href="laser.html" class="card-link">
+          <div class="module-header">
+            <div class="module-icon-wrap" style="--clr:#f953c6">
+              <i class="fa-solid fa-crosshairs"></i>
+            </div>
+            <span class="module-number">04</span>
+          </div>
+          <h3 class="module-title">Laser Cutting</h3><br>
+          <div class="module-meta">
+            <span class="module-date"><i class="fa-regular fa-calendar"></i> Mar 2025</span>
+             <span class="badge-upcoming">Upcoming</span>
+          </div>
+          <div class="module-topics">
+            <span class="topic-tag">Vector Files</span>
+            <span class="topic-tag">Kerf</span>
+            <span class="topic-tag">Engraving</span>
+          </div>
+          <p class="module-desc">
+            Using laser cutters for precise cutting and engraving on acrylic, wood, and cardboard.
+            Learning power/speed settings and safety protocols.
+          </p></a>
+          <div class="module-progress">
+            <span>Progress</span>
+            <div class="progress-bar"><div class="progress-fill" style="--pct:0%"></div></div>
+            <span class="pct-label">0%</span>
+          </div>
+        </div>
+
+        <!-- Module 5: Embedded Systems -->
+        <div class="module-card glass-card" data-category="hardware">
+            <a href="embedded.html" class="card-link">
+          <div class="module-header">
+            <div class="module-icon-wrap" style="--clr:#4facfe">
+              <i class="fa-solid fa-microchip"></i>
+            </div>
+            <span class="module-number">05</span>
+          </div>
+          <h3 class="module-title">Embedded Systems</h3><br>
+          <div class="module-meta">
+            <span class="module-date"><i class="fa-regular fa-calendar"></i> Mar 2025</span>
+             <span class="badge-upcoming">Upcoming</span>
+          </div>
+          <div class="module-topics">
+            <span class="topic-tag">Arduino</span>
+            <span class="topic-tag">Raspberry Pi</span>
+            <span class="topic-tag">C/C++</span>
+            <span class="topic-tag">Sensors</span>
+          </div>
+          <p class="module-desc">
+            Programming microcontrollers, interfacing sensors and actuators, and building
+            real-time embedded applications.
+          </p></a>
+          <div class="module-progress">
+            <span>Progress</span>
+            <div class="progress-bar"><div class="progress-fill" style="--pct:0%"></div></div>
+            <span class="pct-label">0%</span>
+          </div>
+        </div>
+
+        <!-- Module 6: PCB Design -->
+        <div class="module-card glass-card" data-category="design">
+            <a href="pcb.html" class="card-link">
+          <div class="module-header">
+            <div class="module-icon-wrap" style="--clr:#fd746c">
+              <i class="fa-solid fa-circle-nodes"></i>
+            </div>
+            <span class="module-number">06</span>
+          </div>
+          <h3 class="module-title">PCB Design</h3><br>
+          <div class="module-meta">
+            <span class="module-date"><i class="fa-regular fa-calendar"></i> Apr 2025</span>
+             <span class="badge-upcoming">Upcoming</span>
+          </div>
+          <div class="module-topics">
+            <span class="topic-tag">KiCad</span>
+            <span class="topic-tag">Schematic</span>
+            <span class="topic-tag">PCB Layout</span>
+            <span class="topic-tag">Gerber Files</span>
+          </div>
+          <p class="module-desc">
+            Designing schematics and laying out printed circuit boards using KiCad. Generating
+            Gerber files and understanding PCB manufacturing processes.
+          </p></a>
+          <div class="module-progress">
+            <span>Progress</span>
+            <div class="progress-bar"><div class="progress-fill" style="--pct:0%"></div></div>
+            <span class="pct-label">0%</span>
+          </div>
+        </div>
+
+        <!-- Module 7: IoT -->
+        <div class="module-card glass-card" data-category="software">
+          <a href="iot.html" class="card-link">
+          
+          <div class="module-header">
+            <div class="module-icon-wrap" style="--clr:#a18cd1">
+              <i class="fa-solid fa-wifi"></i>
+            </div>
+            <span class="module-number">07</span>
+          </div>
+          <h3 class="module-title">Internet of Things</h3><br>
+          <div class="module-meta">
+            <span class="module-date"><i class="fa-regular fa-calendar"></i> Apr 2025</span>
+             <span class="badge-upcoming">Upcoming</span>
+          </div>
+          <div class="module-topics">
+            <span class="topic-tag">ESP32</span>
+            <span class="topic-tag">MQTT</span>
+            <span class="topic-tag">ThingSpeak</span>
+            <span class="topic-tag">Cloud</span>
+          </div>
+          <p class="module-desc">
+            Connecting devices to the internet using ESP32, MQTT protocol, and cloud dashboards
+            to build smart monitoring systems.
+          </p></a>
+          <div class="module-progress">
+            <span>Progress</span>
+            <div class="progress-bar"><div class="progress-fill" style="--pct:0%"></div></div>
+            <span class="pct-label">0%</span>
+          </div>
+        </div>
+
+        <!-- Module 8: Java Networking -->
+        <div class="module-card glass-card" data-category="software">
+
+          <a href="java.html" class="card-link">
+          <div class="module-header">
+            <div class="module-icon-wrap" style="--clr:#f6d365">
+              <i class="fa-brands fa-java"></i>
+            </div>
+            <span class="module-number">08</span>
+          </div>
+          <h3 class="module-title">Java Networking</h3><br>
+          <div class="module-meta">
+            <span class="module-date"><i class="fa-regular fa-calendar"></i> May 2025</span>
+             <span class="badge-upcoming">Upcoming</span>
+          </div>
+          <div class="module-topics">
+            <span class="topic-tag">Sockets</span>
+            <span class="topic-tag">TCP/UDP</span>
+            <span class="topic-tag">Client-Server</span>
+          </div>
+          <p class="module-desc">
+            Implementing network communication using Java Sockets. Building client-server
+            applications with TCP/UDP protocols.
+          </p></a>
+          <div class="module-progress">
+            <span>Progress</span>
+            <div class="progress-bar"><div class="progress-fill" style="--pct:0%"></div></div>
+            <span class="pct-label">0%</span>
+          </div>
+        </div>
+
+        <!-- Module 9: AI / ML -->
+        <div class="module-card glass-card" data-category="software">
+
+          <a href="aiml.html" class="card-link">
+          <div class="module-header">
+            <div class="module-icon-wrap" style="--clr:#43e97b">
+              <i class="fa-solid fa-brain"></i>
+            </div>
+            <span class="module-number">09</span>
+          </div>
+          <h3 class="module-title">AI / Machine Learning</h3><br>
+          <div class="module-meta">
+            <span class="module-date"><i class="fa-regular fa-calendar"></i> May 2025</span>
+             <span class="badge-upcoming">Upcoming</span>
+          </div>
+          <div class="module-topics">
+            <span class="topic-tag">Python</span>
+            <span class="topic-tag">TensorFlow</span>
+            <span class="topic-tag">Scikit-learn</span>
+            <span class="topic-tag">Neural Networks</span>
+          </div>
+          <p class="module-desc">
+            Exploring machine learning algorithms, training models, and deploying AI solutions
+            using Python, TensorFlow and Scikit-learn.
+          </p></a>
+         <div class="module-progress">
+            <span>Progress</span>
+            <div class="progress-bar"><div class="progress-fill" style="--pct:0%"></div></div>
+            <span class="pct-label">0%</span>
+          </div>
+        </div>
+
+        <!-- Module 10: (Bonus / Open) -->
+        <div class="module-card glass-card module-upcoming" data-category="hardware">
+          <a href="net.html" class="card-link">
+          <div class="module-header">
+            <div class="module-icon-wrap" style="--clr:#e0c3fc">
+              <i class="fa-solid fa-bolt"></i>
+            </div>
+            <span class="module-number">10</span>
+          </div>
+          <h3 class="module-title">Networking</h3><br>
+          <div class="module-meta">
+            <span class="module-date"><i class="fa-regular fa-calendar"></i> Jun 2025</span>
+            <span class="badge-upcoming">Upcoming</span>
+          </div>
+          <div class="module-topics">
+            <span class="topic-tag">TBD</span>
+          </div>
+          <p class="module-desc">
+            The 10th module is yet to begin. Documentation will be added here once the module
+            starts — topics and project work to be updated regularly.
+          </p></a>
+          <div class="module-progress">
+            <span>Progress</span>
+            <div class="progress-bar"><div class="progress-fill" style="--pct:0%"></div></div>
+            <span class="pct-label">0%</span>
+          </div>
+        </div>
+
+      </div><!-- /modules-grid -->
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS SECTION ===== -->
+  <section class="projects section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">What I've Built</span>
+        <h2 class="section-title">My <span class="accent">Projects</span></h2>
+        <p class="section-subtitle">Add your project details here — replace the placeholder content below.</p>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Project 1 Placeholder -->
+        <div class="project-card glass-card">
+          <div class="project-thumb">
+            <div class="project-thumb-placeholder">
+              <i class="fa-solid fa-image"></i>
+              <img src="project1.jpeg" value="project1">
+              <a href=""
+              <span>Project Screenshot</span>
+            </div>
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="https://royal-anuj.vercel.app/" class="proj-link" title="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <a href="https://github.com/anujkalbhile96k/Royal_Anuj" class="proj-link" title="GitHub"><i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tag-label">Project 01</span>
+            <h3 class="project-title">Indian Navy</h3>
+            <p class="project-desc">
+             Successfully completed our Web Technology practical project as a team of 5, where we designed a website dedicated to the Indian Armed Forces.
+             I worked on the Indian Navy webpage, developing it using HTML, CSS, and JavaScript.
+             This project helped me strengthen my front-end skills and understand teamwork in real project development.
+            <div class="project-stack">
+              <span class="stack-tag">Technology 1</span>
+              <span class="stack-tag">Technology 2</span>
+              <span class="stack-tag">Technology 3</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 Placeholder -->
+        <div class="project-card glass-card">
+          <div class="project-thumb">
+            <div class="project-thumb-placeholder">
+              <i class="fa-solid fa-image"></i>
+              <span>Project Screenshot</span>
+            </div>
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="#" class="proj-link" title="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <a href="#" class="proj-link" title="GitHub"><i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tag-label">Project 02</span>
+            <h3 class="project-title">Your Project Title Here</h3>
+            <p class="project-desc">
+              Add a brief description of your second project. What did you build and why?
+              What were the key challenges? Replace this placeholder with your real project details.
+            </p>
+            <div class="project-stack">
+              <span class="stack-tag">Technology 1</span>
+              <span class="stack-tag">Technology 2</span>
+              <span class="stack-tag">Technology 3</span>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /projects-grid -->
+
+      <!-- CTA to add more projects -->
+      <div class="projects-cta">
+        <p>More projects coming soon…</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Get In Touch</span>
+        <h2 class="section-title">Contact <span class="accent">Me</span></h2>
+        <p class="section-subtitle">
+          Feel free to reach out via WhatsApp, call, email or social media — I'm always happy to connect!
+        </p>
+      </div>
+
+      <div class="contact-wrapper">
+
+        <!-- Social / contact links -->
+        <div class="contact-links-grid">
+
+          <!-- WhatsApp -->
+          <a href="https://wa.me/9356151557" target="_blank" class="contact-card glass-card whatsapp">
+            <div class="contact-icon-wrap">
+              <i class="fa-brands fa-whatsapp"></i>
+            </div>
+            <div class="contact-info">
+              <span class="contact-platform">WhatsApp</span>
+              <span class="contact-handle">Chat with me</span>
+            </div>
+            <i class="fa-solid fa-arrow-right contact-arrow"></i>
+          </a>
+
+          <!-- Phone Call -->
+          <a href="tel:+919356151557" class="contact-card glass-card phone">
+            <div class="contact-icon-wrap">
+              <i class="fa-solid fa-phone"></i>
+            </div>
+            <div class="contact-info">
+              <span class="contact-platform">Call</span>
+              <span class="contact-handle">+91 93561 51557</span>
+            </div>
+            <i class="fa-solid fa-arrow-right contact-arrow"></i>
+          </a>
+
+          <!-- Email -->
+          <a href="mailto:anujkalbhile496@gmail.com" class="contact-card glass-card email">
+            <div class="contact-icon-wrap">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="contact-info">
+              <span class="contact-platform">Email</span>
+              <span class="contact-handle">anujkalbhile496@gmail.com</span>
+            </div>
+            <i class="fa-solid fa-arrow-right contact-arrow"></i>
+          </a>
+
+          <!-- Instagram -->
+          <a href="https://instagram.com/anujkalbhile" target="_blank" class="contact-card glass-card instagram">
+            <div class="contact-icon-wrap">
+              <i class="fa-brands fa-instagram"></i>
+            </div>
+            <div class="contact-info">
+              <span class="contact-platform">Instagram</span>
+              <span class="contact-handle">@anujkalbhile</span>
+            </div>
+            <i class="fa-solid fa-arrow-right contact-arrow"></i>
+          </a>
+
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/anuj-kalbhile-317b37371/" target="_blank" class="contact-card glass-card linkedin">
+            <div class="contact-icon-wrap">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </div>
+            <div class="contact-info">
+              <span class="contact-platform">LinkedIn</span>
+              <span class="contact-handle">Anuj Kalbhile</span>
+            </div>
+            <i class="fa-solid fa-arrow-right contact-arrow"></i>
+          </a>
+
+          <!-- GitHub -->
+          <a href="https://github.com/anujkalbhile96k" target="_blank" class="contact-card glass-card github">
+            <div class="contact-icon-wrap">
+              <i class="fa-brands fa-github"></i>
+            </div>
+            <div class="contact-info">
+              <span class="contact-platform">GitHub</span>
+              <span class="contact-handle">github.com/anujkalbhile96k</span>
+            </div>
+            <i class="fa-solid fa-arrow-right contact-arrow"></i>
+          </a>
+
+        </div><!-- /contact-links-grid -->
+
+        <!-- Quick Message Form -->
+        <div class="contact-form-wrap glass-card">
+          <h3>Send a Quick Message</h3>
+          <p class="form-note">Fill in your details and I'll get back to you!</p>
+          <form id="contactForm" class="contact-form" novalidate>
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="Enter Your Name" required/>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="xyz@gmail.com" required/>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4" placeholder="Hello Anuj, I'd like to connect…" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">
+              <i class="fa-solid fa-paper-plane"></i> Send Message
+            </button>
+            <!-- Feedback message shown after submit -->
+            <p class="form-feedback" id="formFeedback"></p>
+          </form>
+        </div>
+
+      </div><!-- /contact-wrapper -->
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <span class="logo-text">AK<span class="accent">.</span></span>
+        <p class="footer-text">
+          Designed &amp; built by <strong>Anuj Krushna Kalbhile</strong> · SSGMCE Shegaon
+        </p>
+        <p class="footer-copy">&copy; <span id="year"></span> All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+

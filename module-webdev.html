@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Module 01 — Web Development | Anuj Kalbhile</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <!-- Shared portfolio styles -->
+  <link rel="stylesheet" href="style.css"/>
+  <!-- Module page specific styles -->
+  <link rel="stylesheet" href="module-style.css"/>
+</head>
+<body>
+
+  <!-- ===== NAVBAR (same as main site) ===== -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="nav-brand">
+      <a href="index.html" class="logo-text">AK<span class="accent">.</span></a>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html#home"     class="nav-link">Home</a></li>
+      <li><a href="index.html#about"    class="nav-link">About</a></li>
+      <li><a href="index.html#modules"  class="nav-link active">Modules</a></li>
+      <li><a href="index.html#projects" class="nav-link">Projects</a></li>
+      <li><a href="index.html#contact"  class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <span class="toggle-icon sun"><i class="fa-solid fa-sun"></i></span>
+        <span class="toggle-icon moon"><i class="fa-solid fa-moon"></i></span>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== MODULE PAGE CONTENT ===== -->
+  <main class="module-page">
+
+    <!-- ---- HERO BANNER ---- -->
+    <div class="mod-hero" style="--mod-clr: #00c6ff;">
+      <div class="mod-hero-bg"></div>
+      <div class="container">
+
+        <!-- Back button -->
+        <a href="index.html#modules" class="back-btn">
+          <i class="fa-solid fa-arrow-left"></i> Back to Modules
+        </a>
+
+        <div class="mod-hero-content">
+          <!-- Icon -->
+          <div class="mod-big-icon">
+            <i class="fa-solid fa-globe"></i>
+          </div>
+
+          <!-- Title block -->
+          <div class="mod-title-block">
+            <span class="mod-number">Module 01</span>
+            <h1 class="mod-title">Web Development</h1>
+            <p class="mod-subtitle">
+              Building modern, responsive websites using HTML5, CSS3, and JavaScript.
+              Learning the fundamentals of front-end development and web hosting.
+            </p>
+
+            <!-- Meta chips -->
+            <div class="mod-chips">
+              <span class="chip"><i class="fa-regular fa-calendar"></i> Started: Jan 2025</span>
+              <span class="chip"><i class="fa-solid fa-tag"></i> Software</span>
+              <span class="chip"><i class="fa-solid fa-fire"></i> In Progress</span>
+            </div>
+          </div>
+
+          <!-- Progress ring -->
+          <div class="mod-progress-circle">
+            <svg viewBox="0 0 120 120" class="progress-svg">
+              <circle class="progress-track" cx="60" cy="60" r="50"/>
+              <!-- stroke-dashoffset controls fill — 314 = full circumference (2πr), set offset = 314*(1-pct) -->
+              <circle class="progress-ring" cx="60" cy="60" r="50" style="--dash-offset: 63;"/>
+            </svg>
+            <div class="progress-label">
+              <span class="pct-big">80%</span>
+              <span class="pct-sub">Complete</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div><!-- /mod-hero -->
+
+
+    <!-- ---- MAIN BODY ---- -->
+    <div class="container mod-body">
+
+      <div class="mod-layout">
+
+        <!-- LEFT: Day-by-day documentation -->
+        <section class="mod-docs">
+          <h2 class="docs-heading">
+            <i class="fa-solid fa-book-open accent"></i>
+            Daily Documentation
+          </h2>
+          <p class="docs-intro">
+            A day-by-day log of everything I learned, built, and explored in this module.
+          </p>
+
+          <!-- Timeline of day entries -->
+          <div class="timeline">
+
+            <!-- ===== DAY ENTRY TEMPLATE =====
+                 Copy this block for each new day.
+                 Change: day number, date, topic heading, and description.
+            ===================================== -->
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-card glass-card">
+                <div class="tl-header">
+                  <span class="tl-day">Day 1</span>
+                  <span class="tl-date"><i class="fa-regular fa-calendar-days"></i> 10 Jan 2025</span>
+                </div>
+                <h3 class="tl-topic">Introduction to HTML</h3>
+                <p class="tl-desc">
+                  Learned the basic structure of an HTML document — DOCTYPE, head, body, 
+                  headings, paragraphs, links, and images. Understood how browsers parse 
+                  and render HTML tags. Created a simple "Hello World" webpage.
+                </p>
+                <!-- Optional: tags for what was covered -->
+                <div class="tl-tags">
+                  <span class="tl-tag">HTML Basics</span>
+                  <span class="tl-tag">Tags & Elements</span>
+                  <span class="tl-tag">Browser Rendering</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-card glass-card">
+                <div class="tl-header">
+                  <span class="tl-day">Day 2</span>
+                  <span class="tl-date"><i class="fa-regular fa-calendar-days"></i> 12 Jan 2025</span>
+                </div>
+                <h3 class="tl-topic">CSS Styling & Box Model</h3>
+                <p class="tl-desc">
+                  Explored CSS selectors, properties, and the box model (margin, border, 
+                  padding, content). Practiced styling text, colours, and backgrounds. 
+                  Applied inline, internal, and external CSS to the same HTML page.
+                </p>
+                <div class="tl-tags">
+                  <span class="tl-tag">CSS Selectors</span>
+                  <span class="tl-tag">Box Model</span>
+                  <span class="tl-tag">Styling</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-card glass-card">
+                <div class="tl-header">
+                  <span class="tl-day">Day 3</span>
+                  <span class="tl-date"><i class="fa-regular fa-calendar-days"></i> 15 Jan 2025</span>
+                </div>
+                <h3 class="tl-topic">Flexbox & Responsive Layouts</h3>
+                <p class="tl-desc">
+                  Learned CSS Flexbox to arrange elements in rows and columns. 
+                  Built a responsive navigation bar and a card grid that adapts to 
+                  different screen sizes using media queries.
+                </p>
+                <div class="tl-tags">
+                  <span class="tl-tag">Flexbox</span>
+                  <span class="tl-tag">Media Queries</span>
+                  <span class="tl-tag">Responsive Design</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-card glass-card">
+                <div class="tl-header">
+                  <span class="tl-day">Day 4</span>
+                  <span class="tl-date"><i class="fa-regular fa-calendar-days"></i> 18 Jan 2025</span>
+                </div>
+                <h3 class="tl-topic">JavaScript Fundamentals</h3>
+                <p class="tl-desc">
+                  Introduction to JavaScript — variables, data types, functions, 
+                  conditionals, and loops. Practiced DOM manipulation to change page 
+                  content dynamically on button click events.
+                </p>
+                <div class="tl-tags">
+                  <span class="tl-tag">JS Variables</span>
+                  <span class="tl-tag">DOM Manipulation</span>
+                  <span class="tl-tag">Event Listeners</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-card glass-card">
+                <div class="tl-header">
+                  <span class="tl-day">Day 5</span>
+                  <span class="tl-date"><i class="fa-regular fa-calendar-days"></i> 22 Jan 2025</span>
+                </div>
+                <h3 class="tl-topic">Mini Project — Personal Portfolio Page</h3>
+                <p class="tl-desc">
+                  Applied all concepts learned so far to build a simple personal 
+                  portfolio webpage with a header, about section, skills list, 
+                  and a contact form — fully styled and responsive.
+                </p>
+                <div class="tl-tags">
+                  <span class="tl-tag">HTML + CSS + JS</span>
+                  <span class="tl-tag">Portfolio</span>
+                  <span class="tl-tag">Mini Project</span>
+                </div>
+              </div>
+            </div>
+
+            <!--
+              =============================================
+              ADD MORE DAYS BELOW AS YOU KEEP LEARNING:
+
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card glass-card">
+                  <div class="tl-header">
+                    <span class="tl-day">Day 6</span>
+                    <span class="tl-date"><i class="fa-regular fa-calendar-days"></i> DD Mon YYYY</span>
+                  </div>
+                  <h3 class="tl-topic">Your Topic Here</h3>
+                  <p class="tl-desc">What you learned or built today...</p>
+                  <div class="tl-tags">
+                    <span class="tl-tag">Tag 1</span>
+                    <span class="tl-tag">Tag 2</span>
+                  </div>
+                </div>
+              </div>
+              =============================================
+            -->
+
+          </div><!-- /timeline -->
+        </section><!-- /mod-docs -->
+
+
+        <!-- RIGHT: Sidebar with module info -->
+        <aside class="mod-sidebar">
+
+          <!-- Topics covered -->
+          <div class="sidebar-card glass-card">
+            <h3 class="sidebar-heading">
+              <i class="fa-solid fa-list-check accent"></i> Topics Covered
+            </h3>
+            <ul class="topics-list">
+              <li><i class="fa-solid fa-check"></i> HTML5 Structure & Semantics</li>
+              <li><i class="fa-solid fa-check"></i> CSS3 Styling & Box Model</li>
+              <li><i class="fa-solid fa-check"></i> Flexbox & CSS Grid</li>
+              <li><i class="fa-solid fa-check"></i> Responsive Design</li>
+              <li><i class="fa-solid fa-check"></i> JavaScript Basics & DOM</li>
+              <li class="pending"><i class="fa-regular fa-clock"></i> Node.js & Backend (upcoming)</li>
+            </ul>
+          </div>
+
+          <!-- Tools used -->
+          <div class="sidebar-card glass-card">
+            <h3 class="sidebar-heading">
+              <i class="fa-solid fa-wrench accent"></i> Tools & Technologies
+            </h3>
+            <div class="tools-grid">
+              <span class="tool-chip">VS Code</span>
+              <span class="tool-chip">HTML5</span>
+              <span class="tool-chip">CSS3</span>
+              <span class="tool-chip">JavaScript</span>
+              <span class="tool-chip">Chrome DevTools</span>
+              <span class="tool-chip">GitHub Pages</span>
+            </div>
+          </div>
+
+          <!-- Quick stats -->
+          <div class="sidebar-card glass-card">
+            <h3 class="sidebar-heading">
+              <i class="fa-solid fa-chart-simple accent"></i> Module Stats
+            </h3>
+            <div class="stat-rows">
+              <div class="stat-row">
+                <span class="sr-label">Days Completed</span>
+                <span class="sr-value accent">5</span>
+              </div>
+              <div class="stat-row">
+                <span class="sr-label">Projects Built</span>
+                <span class="sr-value accent">1</span>
+              </div>
+              <div class="stat-row">
+                <span class="sr-label">Progress</span>
+                <span class="sr-value accent">80%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Navigation to other modules -->
+          <div class="sidebar-card glass-card">
+            <h3 class="sidebar-heading">
+              <i class="fa-solid fa-compass accent"></i> Other Modules
+            </h3>
+            <nav class="mod-nav-list">
+              <a href="module-webdev.html"   class="mod-nav-item active">01 — Web Development</a>
+              <a href="module-cad.html"       class="mod-nav-item">02 — CAD Design</a>
+              <a href="module-3dprint.html"   class="mod-nav-item">03 — 3D Printing</a>
+              <a href="module-laser.html"     class="mod-nav-item">04 — Laser Cutting</a>
+              <a href="module-embedded.html"  class="mod-nav-item">05 — Embedded Systems</a>
+              <a href="module-pcb.html"       class="mod-nav-item">06 — PCB Design</a>
+              <a href="module-iot.html"       class="mod-nav-item">07 — IoT</a>
+              <a href="module-java.html"      class="mod-nav-item">08 — Java Networking</a>
+              <a href="module-aiml.html"      class="mod-nav-item">09 — AI / ML</a>
+              <a href="module-advanced.html"  class="mod-nav-item">10 — Advanced FabLab</a>
+            </nav>
+          </div>
+
+        </aside><!-- /mod-sidebar -->
+
+      </div><!-- /mod-layout -->
+    </div><!-- /container -->
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <span class="logo-text">AK<span class="accent">.</span></span>
+        <p class="footer-text">Designed &amp; built by <strong>Anuj Krushna Kalbhile</strong> · SSGMCE Shegaon</p>
+        <p class="footer-copy">&copy; <span id="year"></span> All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

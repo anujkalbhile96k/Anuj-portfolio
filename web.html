@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Anuj Krushna Kalbhile | CSE Portfolio</title>
+
+  <!-- Google Fonts: Syne (display) + DM Sans (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+    <style>
+
+
+
+
+
+
+    </style>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div>
+        <a href="https://royal-anuj.vercel.app/" class="nav-brand" >
+      <span class="logo-text"> ← Back<span class="accent">.</span></span>
+    </div>
+
+    
+
+    <ul class="nav-links" id="navLinks">
+     </center><h2><li><a href="#webdev" >-------------------Webdevelopment -------------------</h2></center>
+
+    </ul>
+
+    <div class="nav-actions">
+      <!-- Dark / Light Mode Toggle -->
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <span class="toggle-icon sun"><i class="fa-solid fa-sun"></i></span>
+        <span class="toggle-icon moon"><i class="fa-solid fa-moon"></i></span>
+      </button>
+
+     <!-- Hamburger Menu (mobile) -->
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav><br><br><br><br>
+
+
+
+
+<!-- ===== PROFILE CARD SECTION ===== -->
+<section class="profile-card-section section">
+  <div class="container">
+
+    <div class="profile-card glass-card">
+
+      <!-- LEFT SIDE: Photo -->
+      <div class="pc-photo-side">
+        <div class="pc-photo-wrap">
+          <!-- Replace 'your-photo.jpg' with your actual photo file name -->
+          <img
+            src="photo2.jpeg"
+            alt="Anuj Krushna Kalbhile"
+            class="pc-photo"
+            onerror="this.style.display='none'; document.getElementById('pcPhotoPlaceholder').style.display='flex';"
+          />
+          <!-- Shown when no photo file found -->
+          <div class="pc-photo-placeholder" id="pcPhotoPlaceholder">
+            <i class="fa-solid fa-user"></i>
+          </div>
+        </div>
+        <!-- Name & title below photo -->
+        <h3 class="pc-name">Anuj Krushna Kalbhile</h3>
+        <p class="pc-role">CSE Student · SSGMCE Shegaon</p>
+      </div>
+
+      <!-- DIVIDER LINE between left and right -->
+      <div class="pc-divider"></div>
+
+      <!-- RIGHT SIDE: Info + Resume Download -->
+      <div class="pc-info-side">
+
+        <!-- Short bio / intro -->
+        <h2 class="pc-heading">Day 1:  <span class="accent">About Me</span></h2>
+        <p class="pc-bio">
+          I am a Computer Science &amp; Engineering student at SSGMCE Shegaon, 
+          passionate about FabLab fabrication, embedded systems, web development, 
+          and building projects that connect the digital and physical world.
+          Currently learning 10 modules at the college FabLab.
+        </p>
+
+        <!-- Key details list -->
+        <ul class="pc-details">
+          <li>
+            <span class="pc-detail-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+            <span class="pc-detail-label">Degree</span>
+            <span class="pc-detail-value">B.E. Computer Science &amp; Engineering</span>
+          </li>
+          <li>
+            <span class="pc-detail-icon"><i class="fa-solid fa-building-columns"></i></span>
+            <span class="pc-detail-label">College</span>
+            <span class="pc-detail-value">SSGMCE Shegaon, Maharashtra</span>
+          </li>
+          <li>
+            <span class="pc-detail-icon"><i class="fa-solid fa-flask"></i></span>
+            <span class="pc-detail-label">Lab</span>
+            <span class="pc-detail-value">FabLab — Digital Fabrication</span>
+          </li>
+          <li>
+            <span class="pc-detail-icon"><i class="fa-solid fa-location-dot"></i></span>
+            <span class="pc-detail-label">Location</span>
+            <span class="pc-detail-value">Shegaon, Maharashtra, India</span>
+          </li>
+        </ul>
+    
+          <a href="resume.pdf" class="btn btn-primary" download="resume.pdf">Download Resume</a>
+        </a>
+      </div><!-- /pc-info-side -->
+
+    </div><!-- /profile-card -->
+
+  </div>
+</section>
+<!-- ===== END PROFILE CARD SECTION ===== -->

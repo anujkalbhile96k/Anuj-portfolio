@@ -991,7 +991,7 @@ p  { font-size: 1rem; }
   border-radius: 50px;
   background: var(--accent-glow);
   border: 1px solid var(--accent);
-  color: var(--accent);
+  color: white;
   font-weight: 500;
 }
 

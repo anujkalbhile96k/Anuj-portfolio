@@ -1,0 +1,104 @@
+<html>
+    <body>
+        <center><b>Learning Form tags </b></center><br><br>
+        <form action="#" method="post" enctype="multipart/form-data" >
+        Full Name:
+        <input type="text" name="fullname" placeholder="Enter you name">
+        <br><br>
+
+        <!-- Password -->
+         Password:
+         <input type="password" name="password" minlength="4" required>
+         <br><br>
+
+         <!-- Email -->
+          Email:
+          <input type="email" name="Email" placeholder="xyz@gmail.com" required>
+          <br><br>
+
+          <!-- Number -->
+           <input type="number" name="Number" required> 
+           <br><br>
+
+          <!-- Telephone -->
+           Phone:
+           <input type="tel" name="phone" pattern="[1-9]{10}" placeholder="Enter Mobile number">
+           <br><br>
+
+           <!-- URL -->
+            Website:
+            <input type="url" name="website" placeholder="https//example.com" >
+            <br><br>
+
+            <!-- Date -->
+            Date of Birth:
+            <input type="date" name="dob">
+            <br><br>
+
+            <!-- Color -->
+             Favourite Color:
+             <input type="color" name="color" >
+             <br></br>
+
+             <!-- Range -->
+              Satisfaction Level:
+              <input type="range" name="range" min="0" max="10" >
+              <br><br>
+
+              <!-- Radio Button -->
+               Gender:
+               <input type="radio" name="gender" value="male"> Male
+               <input type="radio" name="gender" value="female" > Female
+               <input type="radio" name="gender" value="other" > Other
+               <br><br>
+
+               <!-- Checkboxes -->
+                <input type="checkbox" name="hobby" value="Study" >Study
+                <input type="checkbox" name="hobby" value="Music" > Music
+                <input type="checkbox" name="hobby" value="Singing">Singing
+                <br><br>
+
+                <!-- Single select dropdown -->
+                 Favourite Dish:
+                 <select name="Favourite Dish">
+                    <option value="pizza">Pizza</option>
+                    <option value="burger">Burger</option>
+                    <option value="Sandwich">Sandwich</option>
+                    <option value="Ice Cream">Ice cream
+                         <select name="Ice Cream">
+                            <option value="Vanila">Vanila</option>
+                            <option value="Chocolate">Chocolate</option>
+                         </select></option>
+                    <br><br>
+                   
+                    <!-- Multi Select  -->
+                     Subject:
+                     <select name="subjects" multiple>
+                        <option value="math">Mathematics</option>
+                        <option value="phy">Physics</option>
+                        <option value="chem">Chemistry</option>
+                        <option value="comp">Computer</option>
+                     </select>
+                     <br><br>
+                 <!-- File upload -->
+                  Upload your profile picture:
+                  <input type="file" name="profile" accept="image/*"><br>
+                  Upload video :
+                  <input type="file" name="profile" accept="video/*"><br>
+                  Upload Audio:
+                  <input type="file" name="profile" accept="audio/*">
+                  <br><br>
+
+                  <!-- Textarea-->
+                   Address:
+                   <br>
+                   <textarea name="address" rows="4" cols="40" placeholder="Enter Your Address" ></textarea>
+                   <br><br>
+
+                   <!-- Button -->
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset" >
+
+                    </form>
+
+    </body> 

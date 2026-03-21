@@ -1,0 +1,207 @@
+<html>
+    <head>
+        <title>Elements Selector </title>
+        <style>
+
+            /* Header */
+            header{
+                background-color:rgb(248, 45, 0);
+                padding:20px;
+                text-align:center;
+                color:white;
+            }
+
+                /* Navigation */
+        nav {
+            background-color: #265182;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: rgb(1, 6, 15);
+        }
+        
+            /* Element selector */
+            p {
+                color:rgb(244, 23, 156);
+                font-size:18px;
+            }
+            h1{
+                background-color: #bfb0ef;
+                margin:10px;
+                padding:20px;
+                border:1px solid black;
+                text-align:center;
+            }
+            h2{
+                 background-color:rgb(230, 250, 116);
+               font-family: Arial;
+               font-size: 16px;
+               font-weight: bold;
+               text-align:center;
+            }
+
+             /* Class selector */
+             .highlight {
+                background-color:aqua;
+                color:rgb(0, 0, 0);
+             }
+
+             /* ID selector */
+             #mainHeding{
+                color:yellow;
+                text-align:center;
+             }
+             /* Universal Selector */
+            /* *{ 
+                margin:0;
+                padding:0;
+                color:purple;
+            }*/
+
+            /* Group Selector */
+            h3,h4,h5 {
+                color:blue;
+            }
+
+            /* Attribute Selector */
+            input[type="text"]{
+                border:2px solid rgb(51, 141, 244);
+                padding:7px;
+            }
+            input[type="password"]{
+                border:2px solid rgb(51, 141, 244);
+                padding:7px;
+            }
+
+            /* Pseudo-class Selector */
+            a:hover {  
+                color:red;
+            }
+            a:active {
+                color:rgb(21, 0, 255);
+            } 
+
+            /*.red{
+                color:rgb(12, 51, 227);
+            }
+            .yellow{
+                color:rgb(0, 0, 0);
+            } */
+            
+            /* Pseudo-element Selector */
+            p::first-letter {
+                font-size:35px;
+                color:orange;
+            } 
+            
+
+            /* Intro Section */
+        #intro {
+            padding: 30px;
+            background-color: #ffffff;
+            margin: 20px;
+            border-radius: 8px;
+        }
+
+        #intro::first-letter {
+            font-size: 35px;
+            color: #ff6e40;
+        }
+
+        
+
+
+
+            
+
+
+
+        </style>
+    </head>
+    <body>
+
+        <!-- Header -->
+                <header>
+                    <h1>My Website</h1>
+                </header>
+         
+        <!-- Navigation -->
+             <nav>
+             <a href="#">Home</a>
+             <a href="#">Branches</a>
+             <a href="#">Projects</a>
+             <a href="#">Contact</a>
+             </nav>        
+                
+        <!-- Element Selector -->
+        <h1>Element selector Example</h1>
+        <p>This is a paragraph</p>
+        <h2>Variations using Internal CSS</hero>
+         
+        <!-- Class Selector -->
+         <h1>Class Selector Example</h1>
+         <p class="highlight">Paragraph 1</p>
+         <p>Paragraph 2</p>
+         <h2 class="highlight">Heading with class</h2>
+
+         <!-- ID Selector -->
+          <h1 id="mainHeading">ID Selector Example</h1>
+          <p> This paragraph is Normal.</p>
+
+          <!-- Universal Selector -->
+           <h1>Universal Selector</h1>
+           <p>Paragraph Text</p>
+           <div> Div Text</div>
+
+           <!-- Group Selector  -->
+            <h1>Group Selector</h1>
+            <h3>This is Group Selector through h3 </h3>
+            <h4>This is Group Selector through h4</h4>
+            <h5>This is Group Selector through h5</h5>
+
+            <!-- Attribute Selector -->
+             <h1>Attribute Selector</h1>
+              <input type="text" placeholder="Text field">
+              <input type="password" placeholder="Password field"><br><br>
+
+
+            <!-- Pseudo-class Selector -->
+             <a href="https://www.linkedin.com/in/anuj-kalbhile-317b37371/" >Linkdein </a><br><br>
+             Trial :
+             <a class="red" href="https://www.linkedin.com/in/anuj-kalbhile-317b37371/">My Linkdein</a>
+             <a class="yellow" href="https://www.linkedin.com/in/anuj-kalbhile-317b37371/">My Linkdein</a>
+
+                <!--Pseudo-element Selector  -->
+                <!-- All p will have first letter according to given conditions -->
+
+
+               
+                <section id="intro">
+                <h2>About Engineering</h2>
+                <p>
+                 Engineering is the practical application of science and mathematics 
+                to design, build, and maintain structures, machines, and systems.
+                </p>
+                </section>
+
+                <section>
+                <h2 style="text-align:center; color:#1e3d59;">Engineering Branches</h2> 
+
+            
+               
+               
+
+
+
+
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<html>
+<head>
+  <title>Simple Arithmetic & Comparison</title>
+</head>
+<body>
+<h2>Enter Two Numbers</h2>
+Number 1: <input type="number" id="num1"><br><br>
+Number 2: <input type="number" id="num2"><br><br>
+<button onclick="calculate()">Calculate</button>
+<h3>Results:</h3>
+<p id="output"></p>
+<script>
+function calculate() {
+  let a = Number(document.getElementById("num1").value);
+  let b = Number(document.getElementById("num2").value);
+  // Arithmetic operations
+  let sum = a + b;
+  let diff = a - b;
+  let mul = a * b;
+  let div = b !== 0 ? a / b : "Cannot divide by zero"
+  let comparison;
+  if (a > b) {
+    comparison = "First number is greater";
+  } else if (a < b) {
+    comparison = "Second number is greater";
+  } else {
+    comparison = "Both numbers are equal";
+  }
+  document.getElementById("output").innerText =
+    "Sum: " + sum +
+    "\nDifference: " + diff +
+    "\nMultiplication: " + mul +
+    "\nDivision: " + div +
+    "\n" + comparison;
+}
+</script>
+</body>
+</html>

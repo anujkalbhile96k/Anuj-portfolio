@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FabLab Student Agreement | Anuj Kalbhile</title>
+
+  <!-- Google Fonts: Syne + DM Sans — same as portfolio -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet"/>
+
+  <!-- Font Awesome 6 icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <!-- Apply saved theme before paint — no flash -->
+  <script>
+    (function(){
+      var t = localStorage.getItem('theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+
+  <style>
+/* =============================================================
+   DESIGN TOKENS — matches portfolio exactly
+============================================================= */
+[data-theme="dark"] {
+  --bg-primary:    #08080f;
+  --bg-secondary:  #0f0f1c;
+  --bg-card:       rgba(255,255,255,0.035);
+  --bg-card-hover: rgba(255,255,255,0.07);
+  --border:        rgba(255,255,255,0.07);
+  --border-hover:  rgba(255,255,255,0.16);
+  --text-primary:  #eeeefa;
+  --text-secondary:#9898b4;
+  --text-muted:    #55556e;
+  --accent:        #7c5cfc;
+  --accent-glow:   rgba(124,92,252,0.30);
+  --accent-2:      #00c6ff;
+  --accent-3:      #f953c6;
+  --navbar-bg:     rgba(8,8,15,0.90);
+  --glass:         blur(18px);
+  --shadow-card:   0 10px 44px rgba(0,0,0,0.45);
+  --shadow-glow:   0 0 40px rgba(124,92,252,0.22);
+}
+
+[data-theme="light"] {
+  --bg-primary:    #f2f2fb;
+  --bg-secondary:  #e8e8f5;
+  --bg-card:       rgba(255,255,255,0.78);
+  --bg-card-hover: rgba(255,255,255,0.96);
+  --border:        rgba(0,0,0,0.07);
+  --border-hover:  rgba(0,0,0,0.16);
+  --text-primary:  #0e0e1e;
+  --text-secondary:#42425a;
+  --text-muted:    #8888a0;
+  --accent:        #6b3fe7;
+  --accent-glow:   rgba(107,63,231,0.22);
+  --accent-2:      #0099cc;
+  --accent-3:      #d93ea1;
+  --navbar-bg:     rgba(242,242,251,0.92);
+  --glass:         blur(18px);
+  --shadow-card:   0 4px 24px rgba(0,0,0,0.09);
+  --shadow-glow:   0 0 28px rgba(107,63,231,0.18);
+}
+
+/* =============================================================
+   RESET & BASE
+============================================================= */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;font-size:16px;}
+body{
+  font-family:'DM Sans',sans-serif;
+  background:var(--bg-primary);
+  color:var(--text-primary);
+  transition:background .35s,color .35s;
+  overflow-x:hidden;
+  line-height:1.6;
+}
+a{text-decoration:none;color:inherit;}
+ul{list-style:none;}
+button{cursor:pointer;border:none;outline:none;background:none;}
+h1,h2,h3{font-family:'Syne',sans-serif;line-height:1.15;font-weight:700;}
+
+/* scrollbar */
+::-webkit-scrollbar{width:6px;}
+::-webkit-scrollbar-track{background:var(--bg-secondary);}
+::-webkit-scrollbar-thumb{background:var(--accent);border-radius:6px;}
+
+/* glass card */
+.glass-card{
+  background:var(--bg-card);
+  border:1px solid var(--border);
+  border-radius:20px;
+  backdrop-filter:var(--glass);
+  -webkit-backdrop-filter:var(--glass);
+  transition:background .3s,border .3s,box-shadow .3s;
+}
+
+/* =============================================================
+   NAVBAR
+============================================================= */
+.navbar{
+  position:fixed;inset:0 0 auto;z-index:1000;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:.9rem 2rem;
+  background:var(--navbar-bg);
+  backdrop-filter:var(--glass);-webkit-backdrop-filter:var(--glass);
+  border-bottom:1px solid var(--border);
+}
+.logo-text{font-family:'Syne',sans-serif;font-size:1.45rem;font-weight:800;}
+.accent{color:var(--accent);}
+.nav-links{display:flex;gap:1.8rem;}
+.nav-link{
+  font-size:.9rem;font-weight:500;color:var(--text-secondary);
+  position:relative;transition:color .25s;padding-bottom:2px;
+}
+.nav-link::after{
+  content:'';position:absolute;bottom:-2px;left:0;
+  width:0;height:2px;background:var(--accent);
+  border-radius:2px;transition:width .25s;
+}
+.nav-link:hover,.nav-link.active{color:var(--text-primary);}
+.nav-link:hover::after,.nav-link.active::after{width:100%;}
+.nav-actions{display:flex;align-items:center;gap:.75rem;}
+
+/* theme toggle */
+.theme-toggle{
+  width:42px;height:42px;border-radius:50%;
+  border:1px solid var(--border);background:var(--bg-card);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--text-secondary);font-size:.95rem;
+  position:relative;overflow:hidden;transition:all .3s;
+}
+.theme-toggle:hover{background:var(--accent);color:#fff;border-color:var(--accent);}
+.toggle-icon{position:absolute;transition:opacity .25s,transform .25s;}
+[data-theme="dark"]  .toggle-icon.sun {opacity:1;transform:scale(1);}
+[data-theme="dark"]  .toggle-icon.moon{opacity:0;transform:scale(.5);}
+[data-theme="light"] .toggle-icon.sun {opacity:0;transform:scale(.5);}
+[data-theme="light"] .toggle-icon.moon{opacity:1;transform:scale(1);}
+
+/* hamburger */
+.hamburger{display:none;flex-direction:column;gap:5px;width:28px;padding:4px;}
+.hamburger span{display:block;height:2px;border-radius:2px;background:var(--text-primary);transition:all .3s;}
+
+/* =============================================================
+   HERO BANNER
+============================================================= */
+.page-hero{
+  position:relative;
+  padding:130px 0 72px;
+  overflow:hidden;
+  background:var(--bg-primary);
+}
+.page-hero::before{
+  content:'';position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse at 72% 30%, rgba(124,92,252,.15) 0%, transparent 55%),
+    radial-gradient(ellipse at 15% 80%, rgba(0,198,255,.10) 0%, transparent 50%);
+  pointer-events:none;
+}
+/* animated blobs */
+.h-blob{
+  position:absolute;border-radius:50%;filter:blur(72px);pointer-events:none;
+  animation:floatB 11s ease-in-out infinite;
+}
+.h-blob-1{width:440px;height:440px;top:-10%;right:-5%;
+  background:radial-gradient(circle,rgba(124,92,252,.28),transparent 70%);animation-delay:0s;}
+.h-blob-2{width:320px;height:320px;bottom:-4%;left:-6%;
+  background:radial-gradient(circle,rgba(0,198,255,.20),transparent 70%);animation-delay:-5s;}
+.h-blob-3{width:260px;height:260px;top:40%;left:38%;
+  background:radial-gradient(circle,rgba(249,83,198,.15),transparent 70%);animation-delay:-9s;}
+
+@keyframes floatB{
+  0%,100%{transform:translate(0,0) scale(1);}
+  40%{transform:translate(22px,-16px) scale(1.05);}
+  70%{transform:translate(-14px,12px) scale(.97);}
+}
+
+.hero-inner{
+  max-width:860px;margin:0 auto;padding:0 1.5rem;
+  display:flex;flex-direction:column;align-items:center;
+  text-align:center;position:relative;z-index:1;
+}
+
+/* back breadcrumb */
+.back-crumb{
+  display:inline-flex;align-items:center;gap:.5rem;
+  font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--text-muted);background:var(--bg-card);
+  border:1px solid var(--border);border-radius:50px;
+  padding:.3rem 1rem;margin-bottom:1.6rem;
+  transition:all .25s;
+}
+.back-crumb:hover{color:var(--accent);border-color:var(--accent);transform:translateX(-3px);}
+
+/* scroll badge */
+.hero-badge{
+  display:inline-flex;align-items:center;gap:.45rem;
+  font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--accent);background:var(--accent-glow);
+  border:1px solid var(--accent);border-radius:50px;
+  padding:.26rem 1rem;margin-bottom:1rem;
+  animation:fadeUp .5s ease both;
+}
+
+/* big emoji / icon */
+.hero-emoji{
+  font-size:3.8rem;
+  margin-bottom:1rem;
+  animation:fadeUp .5s .06s ease both;
+  filter:drop-shadow(0 0 24px var(--accent-glow));
+}
+
+.hero-title{
+  font-size:clamp(2rem,5vw,3.8rem);font-weight:800;
+  letter-spacing:-.03em;line-height:1.08;
+  margin-bottom:1rem;
+  animation:fadeUp .5s .12s ease both;
+}
+
+.hero-sub{
+  color:var(--text-secondary);font-size:.96rem;line-height:1.8;
+  max-width:520px;margin-bottom:1.8rem;
+  animation:fadeUp .5s .18s ease both;
+}
+
+.hero-chips{
+  display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem;
+  animation:fadeUp .5s .24s ease both;
+}
+.chip{
+  display:inline-flex;align-items:center;gap:.4rem;
+  font-size:.73rem;font-weight:500;padding:.28rem .88rem;
+  border-radius:50px;background:var(--bg-card);
+  border:1px solid var(--border);color:var(--text-secondary);
+}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(22px);}to{opacity:1;transform:translateY(0);}}
+
+/* =============================================================
+   MAIN CONTENT
+============================================================= */
+.page-body{
+  max-width:860px;margin:0 auto;
+  padding:3.5rem 1.5rem 6rem;
+  display:flex;flex-direction:column;gap:2rem;
+}
+
+/* =============================================================
+   AGREEMENT SECTION CARD
+   Each section (FabLab responsibilities / Student responsibilities
+   / Declaration) gets its own styled card.
+============================================================= */
+.agreement-card{
+  padding:2.2rem 2.4rem;
+  position:relative;
+  overflow:hidden;
+  transition:transform .3s,box-shadow .3s,border-color .3s;
+
+  /* entrance animation — .visible added by JS */
+  opacity:0;
+  transform:translateY(26px);
+  transition:opacity .55s ease,transform .55s ease,
+             box-shadow .3s,border-color .3s;
+}
+.agreement-card.visible{opacity:1;transform:translateY(0);}
+.agreement-card:nth-child(1){transition-delay:.05s;}
+.agreement-card:nth-child(2){transition-delay:.15s;}
+.agreement-card:nth-child(3){transition-delay:.25s;}
+.agreement-card:hover{
+  border-color:var(--border-hover);
+  box-shadow:var(--shadow-card);
+  transform:translateY(-3px);
+}
+
+/* decorative coloured top border */
+.agreement-card::before{
+  content:'';
+  position:absolute;top:0;left:0;right:0;
+  height:3px;
+  border-radius:20px 20px 0 0;
+  background:linear-gradient(90deg,var(--card-clr,var(--accent)),var(--card-clr2,var(--accent-2)));
+}
+
+/* decorative large icon watermark in top-right corner */
+.agreement-card::after{
+  content:var(--card-wm,'');
+  position:absolute;top:-10px;right:20px;
+  font-size:7rem;opacity:.04;
+  font-family:'Font Awesome 6 Free';font-weight:900;
+  pointer-events:none;line-height:1;
+  color:var(--card-clr,var(--accent));
+}
+
+/* card header row: icon + title */
+.card-header{
+  display:flex;align-items:center;gap:1rem;
+  margin-bottom:1.6rem;
+}
+
+.card-icon-wrap{
+  width:52px;height:52px;border-radius:15px;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.4rem;
+  background:color-mix(in srgb,var(--card-clr,var(--accent)) 14%,transparent);
+  border:1.5px solid color-mix(in srgb,var(--card-clr,var(--accent)) 40%,var(--border));
+  color:var(--card-clr,var(--accent));
+}
+
+.card-title-block{}
+.card-label{
+  font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--card-clr,var(--accent));margin-bottom:.2rem;display:block;
+}
+.card-title{
+  font-family:'Syne',sans-serif;font-size:1.25rem;font-weight:800;
+  color:var(--text-primary);
+}
+
+/* divider under header */
+.card-divider{
+  height:1px;background:var(--border);margin-bottom:1.5rem;border-radius:1px;
+}
+
+/* responsibility list inside card */
+.resp-list{
+  display:flex;flex-direction:column;gap:.7rem;
+}
+
+.resp-item{
+  display:flex;align-items:flex-start;gap:.85rem;
+  padding:.75rem 1rem;
+  border-radius:12px;
+  background:var(--bg-secondary);
+  border:1px solid var(--border);
+  font-size:.9rem;
+  color:var(--text-secondary);
+  line-height:1.65;
+  transition:background .25s,border-color .25s,transform .25s;
+}
+.resp-item:hover{
+  background:color-mix(in srgb,var(--card-clr,var(--accent)) 7%,var(--bg-secondary));
+  border-color:color-mix(in srgb,var(--card-clr,var(--accent)) 30%,var(--border));
+  transform:translateX(4px);
+}
+
+/* bullet dot */
+.resp-dot{
+  width:8px;height:8px;border-radius:50%;flex-shrink:0;margin-top:.45rem;
+  background:var(--card-clr,var(--accent));
+  box-shadow:0 0 6px color-mix(in srgb,var(--card-clr,var(--accent)) 60%,transparent);
+}
+
+/* =============================================================
+   DECLARATION CARD EXTRAS
+============================================================= */
+.declaration-text{
+  font-size:.95rem;color:var(--text-secondary);
+  line-height:1.8;margin-bottom:1.6rem;
+}
+.declaration-text strong{color:var(--text-primary);}
+
+/* name input field */
+.name-field-wrap{
+  display:flex;flex-direction:column;gap:.5rem;
+  margin-bottom:1.4rem;
+}
+.name-label{
+  font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--text-muted);display:flex;align-items:center;gap:.4rem;
+}
+.name-input{
+  background:var(--bg-secondary);
+  border:1.5px solid var(--border);
+  border-radius:12px;
+  padding:.85rem 1.2rem;
+  color:var(--text-primary);
+  font-family:'DM Sans',sans-serif;font-size:1rem;font-weight:500;
+  outline:none;
+  transition:border-color .25s,box-shadow .25s;
+  width:100%;
+}
+.name-input::placeholder{color:var(--text-muted);}
+.name-input:focus{
+  border-color:var(--accent);
+  box-shadow:0 0 0 3px var(--accent-glow);
+}
+
+/* signed status badge */
+.signed-badge{
+  display:none;                  /* shown by JS after name is entered */
+  align-items:center;gap:.6rem;
+  font-size:.82rem;font-weight:600;
+  color:#43e97b;
+  background:rgba(67,233,123,.1);
+  border:1px solid rgba(67,233,123,.3);
+  border-radius:50px;padding:.35rem 1rem;
+  width:fit-content;
+  animation:fadeUp .4s ease both;
+}
+.signed-badge i{font-size:.9rem;}
+
+/* agree button */
+.agree-btn{
+  display:inline-flex;align-items:center;gap:.6rem;
+  font-family:'Syne',sans-serif;font-weight:700;font-size:.95rem;
+  padding:.82rem 2rem;border-radius:50px;
+  background:var(--accent);color:#fff;
+  box-shadow:0 4px 22px var(--accent-glow);
+  transition:all .3s;cursor:pointer;border:none;
+  margin-top:.5rem;
+}
+.agree-btn:hover{transform:translateY(-2px);box-shadow:0 8px 30px var(--accent-glow);}
+.agree-btn:active{transform:translateY(0);}
+
+/* date stamp shown after signing */
+.sign-date{
+  font-size:.78rem;color:var(--text-muted);margin-top:.75rem;
+  display:none;
+}
+
+/* repo note at bottom of declaration */
+.repo-note{
+  margin-top:1.4rem;
+  padding:.85rem 1.1rem;
+  border-radius:12px;
+  background:color-mix(in srgb,var(--accent) 7%,var(--bg-secondary));
+  border:1px solid color-mix(in srgb,var(--accent) 22%,var(--border));
+  font-size:.82rem;
+  color:var(--text-secondary);
+  display:flex;align-items:flex-start;gap:.65rem;
+  line-height:1.65;
+}
+.repo-note i{color:var(--accent);margin-top:.1rem;flex-shrink:0;}
+
+/* =============================================================
+   BOTTOM NAVIGATION
+============================================================= */
+.bottom-nav{
+  max-width:860px;margin:0 auto;
+  padding:0 1.5rem 5rem;
+  display:flex;justify-content:space-between;align-items:center;
+  flex-wrap:wrap;gap:1rem;
+  border-top:1px solid var(--border);padding-top:2.5rem;
+}
+.btn{
+  display:inline-flex;align-items:center;gap:.5rem;
+  font-family:'Syne',sans-serif;font-weight:600;font-size:.9rem;
+  padding:.72rem 1.6rem;border-radius:50px;transition:all .3s;cursor:pointer;
+}
+.btn-outline{border:2px solid var(--accent);color:var(--accent);}
+.btn-outline:hover{background:var(--accent);color:#fff;}
+.btn-primary{background:var(--accent);color:#fff;box-shadow:0 4px 22px var(--accent-glow);}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 30px var(--accent-glow);}
+
+/* =============================================================
+   FOOTER
+============================================================= */
+.footer{
+  background:var(--bg-secondary);border-top:1px solid var(--border);padding:2.5rem 0;
+}
+.footer-inner{
+  max-width:860px;margin:0 auto;padding:0 1.5rem;
+  display:flex;flex-direction:column;align-items:center;gap:.45rem;text-align:center;
+}
+.footer-text{font-size:.875rem;color:var(--text-secondary);}
+.footer-copy{font-size:.75rem;color:var(--text-muted);}
+
+/* =============================================================
+   RESPONSIVE
+============================================================= */
+@media(max-width:640px){
+  .agreement-card{padding:1.6rem 1.4rem;}
+  .card-icon-wrap{width:44px;height:44px;font-size:1.2rem;}
+  .card-title{font-size:1.05rem;}
+  .resp-item{font-size:.84rem;}
+  .nav-links{
+    display:none;flex-direction:column;
+    position:absolute;top:100%;left:0;right:0;
+    background:var(--navbar-bg);backdrop-filter:var(--glass);
+    padding:1rem 1.5rem;border-bottom:1px solid var(--border);gap:.6rem;
+  }
+  .nav-links.open{display:flex;}
+  .hamburger{display:flex;}
+}
+
+/* CTA Buttons */
+.hero-cta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+  animation: fadeInUp 0.6s 0.4s ease both;
+}
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════
+     NAVBAR
+═══════════════════════════════════ -->
+<nav class="navbar" id="navbar">
+  <div class="nav-brand">
+    <a href="https://anuj-portfolio-chi.vercel.app/" class="nav-logo-link">
+       <img src="Fablab logo.png" alt="Anuj Kalbhile Logo" class="nav-logo-img" height="50px" width="50px"
+       onerror="this.style.display='none'; document.getElementById('logoFallback').style.display='inline';"/>
+    <h3 href="index.html" >Digital <br> Fablab <br> SSGMCE<span class="accent"></h3></a>
+  </div>
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#home"     class="nav-link">Home</a></li>
+    <li><a href="#about"    class="nav-link">About</a></li>
+    <li><a href="#modules"  class="nav-link">Modules</a></li>
+    <li><a href="#projects" class="nav-link">Projects</a></li>
+    <li><a href="#contact"  class="nav-link active">Agreement</a></li>
+  </ul>
+
+  <div class="nav-actions">
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+      <span class="toggle-icon sun"><i class="fa-solid fa-sun"></i></span>
+      <span class="toggle-icon moon"><i class="fa-solid fa-moon"></i></span>
+    </button>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav><br><br>
+
+
+<!-- ═══════════════════════════════════
+     HERO BANNER
+═══════════════════════════════════ -->
+<header class="page-hero">
+  <div class="h-blob h-blob-1"></div>
+  <div class="h-blob h-blob-2"></div>
+  <div class="h-blob h-blob-3"></div>
+
+  <div class="hero-inner">
+   
+      
+    </a>
+
+    <div class="hero-badge">
+      <i class="fa-solid fa-file-contract"></i>&nbsp; Official Document
+    </div>
+
+    <div class="hero-emoji">📜</div>
+
+    <h1 >
+      FabLab Student<br><span class="accent">Agreement</span>
+    </h1><br>
+
+    <p class="hero-sub">
+      This agreement outlines the responsibilities of both the
+      <strong>FabLab, SSGMCE</strong> and the enrolled student,
+      forming the mutual commitment that makes the programme work.
+    </p>
+
+    <div class="hero-cta">
+      <span class="btn btn-primary"><i class="fa-solid fa-building-columns"></i>&nbsp; SSGMCE Shegaon</span>
+      <span class="btn btn-primary"><i class="fa-solid fa-flask"></i>&nbsp; FabLab Programme</span>
+      <span class="btn btn-primary"><i class="fa-solid fa-shield-halved"></i>&nbsp; Binding Agreement</span>
+    </div>
+  </div>
+</header>
+
+
+<!-- ═══════════════════════════════════
+     MAIN CONTENT
+═══════════════════════════════════ -->
+<main class="page-body">
+
+
+  <!-- ══════════════════════════════════════════
+       CARD 1 — FabLab Responsibilities
+  ══════════════════════════════════════════ -->
+  <div class="agreement-card glass-card"
+       style="--card-clr:#00c6ff; --card-clr2:#7c5cfc;">
+
+    <div class="card-header">
+      <div class="card-icon-wrap">
+        <i class="fa-solid fa-building-columns"></i>
+      </div>
+      <div class="card-title-block">
+        <span class="card-label">The Institution</span>
+        <h2 >The FabLab, SSGMCE is responsible for</h2>
+      </div>
+    </div>
+
+    <div class="card-divider"></div>
+
+    <ul class="resp-list">
+
+      <li class="resp-item">
+        <span class="resp-dot"></span>
+        Teaching principles and practices of digital fabrication
+      </li>
+
+      <li class="resp-item">
+        <span class="resp-dot"></span>
+        Arranging lectures, recitations, meetings, and events for the class
+      </li>
+
+      <li class="resp-item">
+        <span class="resp-dot"></span>
+        Evaluating and providing feedback on student work
+      </li>
+
+      <li class="resp-item">
+        <span class="resp-dot"></span>
+        Offering clear standards for completing assignments
+      </li>
+
+      <li class="resp-item">
+        <span class="resp-dot"></span>
+        Certifying and archiving student progress
+      </li>
+
+      <li class="resp-item">
+        <span class="resp-dot"></span>
+        Supervising class preparation
+      </li>
+
+      <li class="resp-item">
+        <span class="resp-dot"></span>
+        Reviewing prospective students, instructors, and labs
+      </li>
+
+      <li class="resp-item">
+        <span class="resp-dot"></span>
+        Providing central staff and infrastructure for students, instructors, and labs
+      </li>
+
+      <li class="resp-item">
+        <span class="resp-dot"></span>
+        Fund-raising for costs not covered by student tuition
+      </li>
+
+      <li class="resp-item">
+        <span class="resp-dot"></span>
+        Managing and reporting on the programme's finances, results, and impacts
+      </li>
+
+      <li class="resp-item">
+        <span class="resp-dot"></span>
+        Publicizing the programme
+      </li>
+
+    </ul>
+  </div><!-- /Card 1 -->
+
+
+  <!-- ══════════════════════════════════════════
+       CARD 2 — Student Responsibilities
+  ══════════════════════════════════════════ -->
+  <div class="agreement-card glass-card"
+       style="--card-clr:#7c5cfc; --card-clr2:#f953c6;">
+
+    <div class="card-header">
+      <div class="card-icon-wrap">
+        <i class="fa-solid fa-user-graduate"></i>
+      </div>
+      <div class="card-title-block">
+        <span class="card-label">The Student</span>
+        <h2 >I am a FabLab, SSGMCE student, responsible for</h2>
+      </div>
+    </div>
+
+    <div class="card-divider"></div>
+
+    <ul class="resp-list">
+
+      <li class="resp-item">
+        <span class="resp-dot"></span>
+        Attending class lectures and participating in reviews
+      </li>
+
+      <li class="resp-item">
+        <span class="resp-dot"></span>
+        Developing and documenting projects assigned to introduce and demonstrate skills
+      </li>
+
+      <li class="resp-item">
+        <span class="resp-dot"></span>
+        Honestly reporting on my work, and appropriately attributing the work of others
+      </li>
+
+      <li class="resp-item">
+        <span class="resp-dot"></span>
+        Working safely
+      </li>
+
+      <li class="resp-item">
+        <span class="resp-dot"></span>
+        Leaving workspaces in the same (or better) condition than I found them
+      </li>
+
+      <li class="resp-item">
+        <span class="resp-dot"></span>
+        Participating in the upkeep of my lab
+      </li>
+
+      <li class="resp-item">
+        <span class="resp-dot"></span>
+        Ensuring that my tuition to cover local and central class costs is covered
+      </li>
+
+      <li class="resp-item">
+        <span class="resp-dot"></span>
+        Following locally applicable health and safety guidance
+      </li>
+
+      <li class="resp-item">
+        <span class="resp-dot"></span>
+        Promoting a respectful environment free of harassment and discrimination
+      </li>
+
+    </ul>
+  </div><!-- /Card 2 -->
+
+
+  <!-- ══════════════════════════════════════════
+       CARD 3 — Declaration
+  ══════════════════════════════════════════ -->
+  <div class="agreement-card glass-card"
+       style="--card-clr:#43e97b; --card-clr2:#00c6ff;">
+
+    <div class="card-header">
+      <div class="card-icon-wrap">
+        <i class="fa-solid fa-pen-nib"></i>
+      </div>
+      <div class="card-title-block">
+        <span class="card-label">Declaration</span>
+        <h2 >✍️ Declaration</h2>
+      </div>
+    </div>
+
+    <div class="card-divider"></div>
+
+    <p class="declaration-text">
+      Signed by committing this file in my repository.<br/>
+      By entering my name below and clicking <strong>"I Agree &amp; Sign"</strong>,
+      I acknowledge that I have read, understood, and accept all the responsibilities
+      outlined in this agreement as a FabLab student at SSGMCE Shegaon.
+    </p>
+
+    <!-- Name input field -->
+    <div class="name-field-wrap">
+      <label for="studentName" class="name-label">
+        <i class="fa-solid fa-signature"></i> Full Name
+      </label>
+      <input
+        type="text"
+        id="studentName"
+        class="name-input"
+        placeholder="Anuj Krushna Kalbhile"
+        autocomplete="off"
+      />
+    </div>
+
+    <!-- Signed status — hidden until signed -->
+    <div class="signed-badge" id="signedBadge">
+      <i class="fa-solid fa-circle-check"></i>
+      Agreement Signed Successfully
+    </div>
+
+    <!-- Date of signing — hidden until signed -->
+    <p class="sign-date" id="signDate"></p>
+
+    <!-- Sign button -->
+    <button class="agree-btn" id="agreeBtn" onclick="signAgreement()">
+      <i class="fa-solid fa-file-signature"></i>
+      I Agree &amp; Sign
+    </button>
+
+    <!-- Note about repository commit -->
+    <div class="repo-note">
+      <i class="fa-solid fa-circle-info"></i>
+      <span>
+        As per FabLab protocol, this agreement is also considered signed by
+        <strong>committing this file to your personal repository</strong>.
+        Make sure to push this page to your GitHub / GitLab portfolio repo.
+      </span>
+    </div>
+
+  </div><!-- /Card 3 -->
+
+
+</main><!-- /page-body -->
+
+
+<!-- ═══════════════════════════════════
+     BOTTOM NAVIGATION
+═══════════════════════════════════ -->
+<div class="bottom-nav">
+  <a href="https://anuj-portfolio-chi.vercel.app/" class="btn btn-outline">
+    <i class="fa-solid fa-arrow-left"></i> Back to Portfolio
+  </a>
+  <a href="index.html#modules" class="btn btn-primary">
+    View Modules <i class="fa-solid fa-arrow-right"></i>
+  </a>
+</div>
+
+
+<!-- ═══════════════════════════════════
+     FOOTER
+═══════════════════════════════════ -->
+<footer class="footer">
+  <div class="footer-inner">
+    <span class="logo-text">AK<span class="accent">.</span></span>
+    <p class="footer-text">
+      Designed &amp; built by <strong>Anuj Krushna Kalbhile</strong> · SSGMCE Shegaon
+    </p>
+    <p class="footer-copy">&copy; <span id="year"></span> All rights reserved.</p>
+  </div>
+</footer>
+
+
+<!-- ═══════════════════════════════════
+     JAVASCRIPT
+═══════════════════════════════════ -->
+<script>
+/* ── Theme toggle ─────────────────────────────────────────── */
+document.getElementById('themeToggle').addEventListener('click', () => {
+  const html = document.documentElement;
+  const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+  html.setAttribute('data-theme', next);
+  localStorage.setItem('theme', next);
+});
+
+/* ── Hamburger mobile menu ────────────────────────────────── */
+document.getElementById('hamburger').addEventListener('click', () => {
+  document.getElementById('navLinks').classList.toggle('open');
+});
+
+/* ── Footer year ──────────────────────────────────────────── */
+document.getElementById('year').textContent = new Date().getFullYear();
+
+/* ── Scroll-reveal for agreement cards ───────────────────────
+   Each .agreement-card starts at opacity:0 / translateY(26px).
+   IntersectionObserver adds .visible once the card enters
+   the viewport, triggering the CSS fade-up transition.
+─────────────────────────────────────────────────────────── */
+const agCards = document.querySelectorAll('.agreement-card');
+
+const cardObs = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      cardObs.unobserve(entry.target);        /* animate once only */
+    }
+  });
+}, { threshold: 0.08 });
+
+agCards.forEach(c => cardObs.observe(c));
+
+/* ── Signing logic ────────────────────────────────────────────
+   When the user clicks "I Agree & Sign":
+   1. Validates that a name has been entered.
+   2. Shows the green "Signed" badge.
+   3. Shows the timestamp of signing.
+   4. Saves name + date to localStorage so it persists on reload.
+   5. Disables the button so it can't be clicked again.
+─────────────────────────────────────────────────────────── */
+function signAgreement() {
+  const nameInput  = document.getElementById('studentName');
+  const signedBadge = document.getElementById('signedBadge');
+  const signDate   = document.getElementById('signDate');
+  const agreeBtn   = document.getElementById('agreeBtn');
+
+  const name = nameInput.value.trim();
+
+  /* Validate — name must not be empty */
+  if (!name) {
+    nameInput.style.borderColor = '#f953c6';
+    nameInput.focus();
+    nameInput.placeholder = '⚠️  Please enter your full name first';
+    setTimeout(() => {
+      nameInput.style.borderColor = '';
+      nameInput.placeholder = 'Anuj Krushna Kalbhile';
+    }, 2500);
+    return;
+  }
+
+  /* Build a readable date-time string */
+  const now       = new Date();
+  const dateStr   = now.toLocaleDateString('en-IN', {
+    weekday:'long', year:'numeric', month:'long', day:'numeric'
+  });
+  const timeStr   = now.toLocaleTimeString('en-IN', {
+    hour:'2-digit', minute:'2-digit'
+  });
+  const fullStamp = `${dateStr} at ${timeStr}`;
+
+  /* Save to localStorage */
+  localStorage.setItem('agreementName', name);
+  localStorage.setItem('agreementDate', fullStamp);
+
+  /* Show signed badge */
+  signedBadge.style.display = 'flex';
+
+  /* Show timestamp */
+  signDate.textContent = `Signed by ${name} on ${fullStamp}`;
+  signDate.style.display = 'block';
+
+  /* Disable input and button */
+  nameInput.disabled = true;
+  nameInput.style.opacity = '0.7';
+  agreeBtn.disabled = true;
+  agreeBtn.innerHTML = '<i class="fa-solid fa-circle-check"></i> Signed';
+  agreeBtn.style.background = '#43e97b';
+  agreeBtn.style.boxShadow  = '0 4px 20px rgba(67,233,123,0.35)';
+  agreeBtn.style.cursor     = 'default';
+}
+
+/* ── Restore signed state on page reload ──────────────────────
+   If the user already signed previously, restore the UI
+   so it shows as signed without needing to sign again.
+─────────────────────────────────────────────────────────── */
+window.addEventListener('load', () => {
+  const savedName = localStorage.getItem('agreementName');
+  const savedDate = localStorage.getItem('agreementDate');
+
+  if (savedName && savedDate) {
+    const nameInput   = document.getElementById('studentName');
+    const signedBadge = document.getElementById('signedBadge');
+    const signDate    = document.getElementById('signDate');
+    const agreeBtn    = document.getElementById('agreeBtn');
+
+    nameInput.value    = savedName;
+    nameInput.disabled = true;
+    nameInput.style.opacity = '0.7';
+
+    signedBadge.style.display = 'flex';
+
+    signDate.textContent  = `Signed by ${savedName} on ${savedDate}`;
+    signDate.style.display = 'block';
+
+    agreeBtn.disabled = true;
+    agreeBtn.innerHTML = '<i class="fa-solid fa-circle-check"></i> Signed';
+    agreeBtn.style.background = '#43e97b';
+    agreeBtn.style.boxShadow  = '0 4px 20px rgba(67,233,123,0.35)';
+    agreeBtn.style.cursor     = 'default';
+  }
+});
+</script>
+</body>
+</html>

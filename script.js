@@ -114,8 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /* Array of roles / descriptions to cycle through */
   const roles = [
     'CSE Student @ SSGMCE Shegaon',
-    'FabLab Learner & Maker',
-    'Embedded Systems Enthusiast',
+    'FabLab Learner',
     'Web Developer',
     'IoT & AI/ML Explorer',
   ];

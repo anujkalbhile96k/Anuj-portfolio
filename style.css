@@ -1569,3 +1569,27 @@ p  { font-size: 1rem; }
     justify-content: center;
   }
 }
+
+
+/* ── NAVBAR LOGO IMAGE ──────────────────────────────────
+   Styles the logo image in the navbar.
+   Adjust width/height to fit your logo's proportions.
+────────────────────────────────────────────────────── */
+
+.nav-logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.nav-logo-img {
+  height: 42px;          /* controls how tall the logo appears */
+  width: auto;           /* keeps the original aspect ratio */
+  object-fit: contain;   /* never stretches or crops the image */
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.nav-logo-img:hover {
+  opacity: 0.8;
+  transform: scale(1.04);
+}

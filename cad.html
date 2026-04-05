@@ -1,9 +1,127 @@
-<html>
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
 <head>
-    <title>CAD Design</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Anuj Krushna Kalbhile | CSE Portfolio</title>
+
+  <!-- Google Fonts: Syne (display) + DM Sans (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-    <h1>CAD design Module</h1>
-    <p>Here is the documentation of HTML, CSS, JavaScript...</p>
+
+ <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-brand">
+      <!-- Logo initials -->
+      
+      <a href="index.html" class="nav-logo-link">
+       <img src="Fablab logo.png" alt="Anuj Kalbhile Logo" class="nav-logo-img"
+        onerror="this.style.display='none'; document.getElementById('logoFallback').style.display='inline';"/>
+       <h3>Digital <br> Fablab <br> SSGMCE<span class="accent"></h3>
+        </a>
+      </div>
+
+
+
+
+
+    <div class="nav-actions">
+      <!-- Dark / Light Mode Toggle -->
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <span class="toggle-icon sun"><i class="fa-solid fa-sun"></i></span>
+        <span class="toggle-icon moon"><i class="fa-solid fa-moon"></i></span>
+      </button>
+
+      <!-- Hamburger Menu (mobile) -->
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+ 
+
+
+    <!-- ===== PROJECTS SECTION ===== -->
+  <section class="projects section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <h1><span class="section-tag">Module 2</span></h1>
+        <h2 class="section-title">UI/UX <span class="accent">Design</span></h2><br>
+        
+      <div class="projects-grid">
+
+        <!-- Project 1 Placeholder -->
+        <div class="project-card glass-card">
+          <div class="project-thumb">
+            <div class="project-thumb-placeholder">
+              <i class="fa-solid fa-image"></i>
+              <img src="tags photo.jpg" value="project1">
+              <a href="tags.html">
+              <span>Project Screenshot</span>
+            </div>
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="tags.html" class="proj-link" title="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+               
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <h1 class="project-title"> Project 01 : Red Bull Project</h1>
+            <p class="project-desc">
+
+
+            <center><span class="btn btn-primary" href="https://www.figma.com/design/UBx3QO2HwbanFeVyuku3sw/Redbull-project?node-id=0-1&t=x0KIAvnO8cBvzrbe-1" >View Project<br>
+            </span></center>
+
+          </div>
+        </div>
+
+        <!-- Project 2 Placeholder -->
+        <div class="project-card glass-card">
+          <div class="project-thumb">
+            <div class="project-thumb-placeholder">
+              <i class="fa-solid fa-image"></i>
+               <img src="motu.jpg" value="project2">
+              <a href="Semantic.html">
+              <span>Project Screenshot</span>
+            </div>
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="Semantic.html" class="proj-link" title="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tag-label"></span>
+            <h3 class="project-title">Project 02: Pizza Hub</h3>
+            
+            <div class="project-stack">
+              <span class="stack-tag"> Video tag</span>
+              <span class="stack-tag"> Audio tag</span>
+              <span class="stack-tag">Anchor tag</span>
+            </div>
+          </div>
+        </div>
+
+
+      </div><!-- /projects-grid --><br><br>
+
+    <center><span class="btn btn-primary"  >Mentors:<br>
+      1. Anshuman Agrawal Sir <br>
+      2. Tanushree Mam </span></center>
+    </div>
+  </section>
+  <script src="script.js"></script>
 </body>
 </html>

@@ -1,9 +1,620 @@
-<html>
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
 <head>
-    <title>Networking</title>
+
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Anuj Krushna Kalbhile | CSE Portfolio</title>
+
+
+  <!-- Google Fonts: Syne + DM Sans -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap"
+    rel="stylesheet"
+  />
+
+
+  <!-- Font Awesome -->
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+
+
+  <!-- Main Stylesheet -->
+
+  <link rel="stylesheet" href="style.css">
+
+
+  <!-- =====================================================
+       BULLET BOX CSS
+       ===================================================== -->
+
+  <style>
+
+    /* Main bullet container */
+
+    .bullet-box {
+
+      width: 100%;
+
+      box-sizing: border-box;
+
+      padding: 22px 28px;
+
+      margin-top: 20px;
+
+      background: rgba(20, 25, 35, 0.95);
+
+      border: 2px solid #2389e8;
+
+      border-radius: 10px;
+
+      box-shadow:
+        0 0 15px rgba(35, 137, 232, 0.20);
+
+    }
+
+
+    /* Remove default list styling */
+
+    .bullet-box ul {
+
+      list-style: none;
+
+      padding: 0;
+
+      margin: 0;
+
+    }
+
+
+    /* Individual bullet item */
+
+    .bullet-box li {
+
+      position: relative;
+
+      padding: 14px 18px 14px 42px;
+
+      margin: 10px 0;
+
+      background: #0879d9;
+
+      border: 1px solid #4db5ff;
+
+      border-radius: 6px;
+
+      color: white;
+
+      font-size: 17px;
+
+      font-weight: 500;
+
+      line-height: 1.5;
+
+      transition: 0.3s ease;
+
+    }
+
+
+    /* Bullet symbol */
+
+    .bullet-box li::before {
+
+      content: "•";
+
+      position: absolute;
+
+      left: 18px;
+
+      top: 50%;
+
+      transform: translateY(-50%);
+
+      font-size: 25px;
+
+      font-weight: bold;
+
+      color: white;
+
+    }
+
+
+    /* Hover effect */
+
+    .bullet-box li:hover {
+
+      transform: translateX(5px);
+
+      background: #096fc4;
+
+      box-shadow:
+        0 0 10px rgba(77, 181, 255, 0.35);
+
+    }
+
+
+    /* Numbered heading */
+
+    .day-heading {
+
+      font-size: 26px;
+
+      font-weight: 700;
+
+      margin-top: 25px;
+
+      margin-bottom: 10px;
+
+      line-height: 1.3;
+
+    }
+
+
+    /* Mobile responsive */
+
+    @media (max-width: 600px) {
+
+      .bullet-box {
+
+        padding: 15px;
+
+      }
+
+      .bullet-box li {
+
+        font-size: 15px;
+
+        padding: 12px 14px 12px 35px;
+
+      }
+
+      .bullet-box li::before {
+
+        left: 12px;
+
+      }
+
+      .day-heading {
+
+        font-size: 21px;
+
+      }
+
+    }
+
+  </style>
+
 </head>
+
+
 <body>
-    <h1>Networking Module</h1>
-    <p>Here is the documentation of HTML, CSS, JavaScript...</p>
+
+
+  <!-- =====================================================
+       NAVBAR
+       ===================================================== -->
+
+  <nav class="navbar" id="navbar">
+
+
+    <div class="nav-brand">
+
+      <a href="index.html" class="nav-logo-link">
+
+        <img
+          src="Fablab logo.png"
+          alt="Anuj Kalbhile Logo"
+          class="nav-logo-img"
+          onerror="this.style.display='none';"
+        >
+
+
+        <h3>
+
+          Digital
+          <br>
+
+          Fablab
+          <br>
+
+          SSGMCE
+
+          <span class="accent"></span>
+
+        </h3>
+
+      </a>
+
+    </div>
+
+
+
+    <div class="nav-actions">
+
+
+      <!-- Dark / Light Mode Toggle -->
+
+      <button
+        class="theme-toggle"
+        id="themeToggle"
+        aria-label="Toggle theme"
+      >
+
+        <span class="toggle-icon sun">
+
+          <i class="fa-solid fa-sun"></i>
+
+        </span>
+
+
+        <span class="toggle-icon moon">
+
+          <i class="fa-solid fa-moon"></i>
+
+        </span>
+
+      </button>
+
+
+
+      <!-- Hamburger Menu -->
+
+      <button
+        class="hamburger"
+        id="hamburger"
+        aria-label="Open menu"
+      >
+
+        <span></span>
+
+        <span></span>
+
+        <span></span>
+
+      </button>
+
+
+    </div>
+
+  </nav>
+
+
+
+  <!-- =====================================================
+       UI / UX PROJECT SECTION
+       ===================================================== -->
+
+  <section class="projects section" id="projects">
+
+
+    <div class="container">
+
+
+      <!-- Main Section Heading -->
+
+      <div class="section-header">
+
+        <h1>
+
+          <span class="section-tag">
+
+            Module 7
+
+          </span>
+
+        </h1>
+
+
+        <h2 class="section-title">
+
+          Networking
+
+          <span class="accent">
+
+        
+
+          </span>
+
+        </h2>
+
+      </div>
+
+
+
+      <!-- =================================================
+           DAY 01
+           ================================================= -->
+
+      <div class="project-card glass-card">
+
+        <div class="project-body">
+
+          <h2 class="day-heading">
+
+            1. DAY 01 : Data Communication
+
+          </h2>
+
+
+          <div class="bullet-box">
+
+            <ul>
+             <li>Understand the basics of data communication - how information is exchanged between devices, its core components and key characteristics.</li>
+              
+              <li>Core Components: Sender, Receiver, Message,, Transmission Medium, Protocol</li>
+
+              <li>Characteristics: Delivery, Accuracy, Timeliness, Jitter</li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- =================================================
+           DAY 02
+           ================================================= -->
+
+      <div class="project-card glass-card">
+
+        <div class="project-body">
+
+          <h2 class="day-heading">
+
+            2. DAY 02 :  Computer Networks
+
+          </h2>
+
+
+          <div class="bullet-box">
+
+            <ul>
+              <li>Learn what a computer network is, why networking matters, and the different types of networks based on their coverage area.</li>
+
+              <li>Why Networking? : Resource Sharing, Data Sharing, Communication, Cost Reduction, Centralized Management</li>
+
+              <li>Types by Coverage: PAN, LAN, MAN, WAN</li>
+
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- =================================================
+           DAY 03
+           ================================================= -->
+
+      <div class="project-card glass-card">
+
+        <div class="project-body">
+
+          <h2 class="day-heading">
+
+            3. DAY 03 : Topologies & Networking Devices
+
+          </h2>
+
+
+          <div class="bullet-box">
+
+            <ul>
+              <li>Explore the different physical/logical layouts used to arrange a network and the hardware devices that make networking possible.</li>
+
+              <li>Network Topologies: Bus, Star, Ring, Mesh, Hybrid</li>
+
+              <li>Networking Devices : Hub, Switch, Router</li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- =================================================
+           DAY 04
+           ================================================= -->
+
+      <div class="project-card glass-card">
+
+        <div class="project-body">
+
+          <h2 class="day-heading">
+
+            4. DAY 04 : OSI Model & Protocols
+
+          </h2>
+
+
+          <div class="bullet-box">
+
+            <ul>
+              <li>Understand the OSI model - the conceptual framework used to describe how data travels through a network - and get introduced to networking protocols.</li>
+
+              <li>OSI Layers: Physical, Data Link, Network, Transport, Session, Presentation, Application</li>
+
+              <li>Protocols: Set of Rules, Ensures Compatibility, Enables Communication</li>
+              
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+         <!-- =================================================
+           DAY 05
+           ================================================= -->
+
+      <div class="project-card glass-card">
+
+        <div class="project-body">
+
+          <h2 class="day-heading">
+
+            5. DAY 05 : HTTP, IP, DHCP & DNS
+
+          </h2>
+
+
+          <div class="bullet-box">
+
+            <ul>
+              <li>Learn how the web communicates using HTTP, how devices are identified with IP addresses, and how DHCP and DNS automate networking.</li>
+
+              <li>HTTP Methods: GET, POST, PUT, DELETE</li>
+
+              <li>IP Addressing: IPv4, IPv6</li>
+
+             <li>Key Services: DHCP, DNS</li>
+
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+         <!-- =================================================
+           DAY 06
+           ================================================= -->
+
+      <div class="project-card glass-card">
+
+        <div class="project-body">
+
+          <h2 class="day-heading">
+
+            6. DAY 06 :  ARP, ICMP & Revision
+
+          </h2>
+
+
+          <div class="bullet-box">
+
+            <ul>
+              <li>Learn about two key network-layer protocols and revise the topics covered so far in the module.</li>
+
+              <li>Protocols: ARP, ICMP</li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+
+
+         <!-- =================================================
+           DAY 07
+           ================================================= -->
+
+      <div class="project-card glass-card">
+
+        <div class="project-body">
+
+          <h2 class="day-heading">
+
+            7. DAY 07 :  WebSocket & Project Discussion
+          </h2>
+
+
+          <div class="bullet-box">
+
+            <ul>
+              <li>Learn how real-time, two-way communication works on the web using WebSocket and WebRTC, and discuss project ideas to apply networking concepts.</li>
+
+              <li>Real-time Communication: WebSocket, WebRTC (Web Real-Time Communication)</li>
+
+             <li>Wrap-up: Project Ideas , Project Discussion</li>
+
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+     
+
+
+      <!-- =================================================
+           MENTORS
+           ================================================= -->
+
+      <br>
+      <br>
+
+
+      <center>
+
+        <span class="btn btn-primary">
+
+          Mentors:
+
+          <br>
+
+          1. Om Deshmukh Sir
+
+          <br>
+
+          2. Saloni Mam
+
+        </span>
+
+      </center>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- JavaScript -->
+
+  <script src="script.js"></script>
+
+
 </body>
+
 </html>

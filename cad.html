@@ -2,114 +2,193 @@
 <html lang="en" data-theme="dark">
 
 <head>
+
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
   <title>Anuj Krushna Kalbhile | CSE Portfolio</title>
 
-  <!-- Google Fonts -->
+
+  <!-- Google Fonts: Syne + DM Sans -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
+
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link
     href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap"
-    rel="stylesheet">
+    rel="stylesheet"
+  />
+
 
   <!-- Font Awesome -->
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <!-- Existing CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+
+
+  <!-- Main Stylesheet -->
+
   <link rel="stylesheet" href="style.css">
 
-  <!-- =========================================
-       MODIFIED BOX DESIGN
-       ========================================= -->
+
+  <!-- =====================================================
+       BULLET BOX CSS
+       ===================================================== -->
+
   <style>
 
     /* Main bullet container */
+
     .bullet-box {
+
       width: 100%;
+
       box-sizing: border-box;
 
       padding: 22px 28px;
+
       margin-top: 20px;
 
       background: rgba(20, 25, 35, 0.95);
 
       border: 2px solid #2389e8;
+
       border-radius: 10px;
 
-      box-shadow: 0 0 15px rgba(35, 137, 232, 0.20);
+      box-shadow:
+        0 0 15px rgba(35, 137, 232, 0.20);
+
     }
+
 
     /* Remove default list styling */
+
     .bullet-box ul {
+
       list-style: none;
+
       padding: 0;
+
       margin: 0;
+
     }
 
+
     /* Individual bullet item */
+
     .bullet-box li {
+
       position: relative;
 
       padding: 14px 18px 14px 42px;
+
       margin: 10px 0;
 
       background: #0879d9;
 
       border: 1px solid #4db5ff;
+
       border-radius: 6px;
 
       color: white;
 
       font-size: 17px;
+
       font-weight: 500;
 
       line-height: 1.5;
 
       transition: 0.3s ease;
+
     }
 
+
     /* Bullet symbol */
+
     .bullet-box li::before {
+
       content: "•";
 
       position: absolute;
+
       left: 18px;
+
       top: 50%;
 
       transform: translateY(-50%);
 
       font-size: 25px;
+
       font-weight: bold;
 
       color: white;
+
     }
 
+
     /* Hover effect */
+
     .bullet-box li:hover {
+
       transform: translateX(5px);
 
       background: #096fc4;
 
-      box-shadow: 0 0 10px rgba(77, 181, 255, 0.35);
+      box-shadow:
+        0 0 10px rgba(77, 181, 255, 0.35);
+
     }
 
-    /* For mobile screens */
+
+    /* Numbered heading */
+
+    .day-heading {
+
+      font-size: 26px;
+
+      font-weight: 700;
+
+      margin-top: 25px;
+
+      margin-bottom: 10px;
+
+      line-height: 1.3;
+
+    }
+
+
+    /* Mobile responsive */
+
     @media (max-width: 600px) {
 
       .bullet-box {
+
         padding: 15px;
+
       }
 
       .bullet-box li {
+
         font-size: 15px;
+
         padding: 12px 14px 12px 35px;
+
       }
 
       .bullet-box li::before {
+
         left: 12px;
+
+      }
+
+      .day-heading {
+
+        font-size: 21px;
+
       }
 
     }
@@ -121,26 +200,38 @@
 
 <body>
 
-  <!-- =========================================
+
+  <!-- =====================================================
        NAVBAR
-       ========================================= -->
+       ===================================================== -->
 
   <nav class="navbar" id="navbar">
+
 
     <div class="nav-brand">
 
       <a href="index.html" class="nav-logo-link">
 
-        <img src="Fablab logo.png"
+        <img
+          src="Fablab logo.png"
           alt="Anuj Kalbhile Logo"
           class="nav-logo-img"
-          onerror="this.style.display='none';">
+          onerror="this.style.display='none';"
+        >
+
 
         <h3>
-          Digital <br>
-          Fablab <br>
+
+          Digital
+          <br>
+
+          Fablab
+          <br>
+
           SSGMCE
+
           <span class="accent"></span>
+
         </h3>
 
       </a>
@@ -148,34 +239,51 @@
     </div>
 
 
+
     <div class="nav-actions">
 
-      <!-- Dark / Light Mode -->
-      <button class="theme-toggle"
+
+      <!-- Dark / Light Mode Toggle -->
+
+      <button
+        class="theme-toggle"
         id="themeToggle"
-        aria-label="Toggle theme">
+        aria-label="Toggle theme"
+      >
 
         <span class="toggle-icon sun">
+
           <i class="fa-solid fa-sun"></i>
+
         </span>
+
 
         <span class="toggle-icon moon">
+
           <i class="fa-solid fa-moon"></i>
+
         </span>
 
       </button>
 
 
-      <!-- Mobile Menu -->
-      <button class="hamburger"
+
+      <!-- Hamburger Menu -->
+
+      <button
+        class="hamburger"
         id="hamburger"
-        aria-label="Open menu">
+        aria-label="Open menu"
+      >
 
         <span></span>
+
         <span></span>
+
         <span></span>
 
       </button>
+
 
     </div>
 
@@ -183,668 +291,400 @@
 
 
 
-  <!-- =========================================
-       PROJECTS SECTION
-       ========================================= -->
+  <!-- =====================================================
+       UI / UX PROJECT SECTION
+       ===================================================== -->
 
   <section class="projects section" id="projects">
 
+
     <div class="container">
+
+
+      <!-- Main Section Heading -->
 
       <div class="section-header">
 
         <h1>
+
           <span class="section-tag">
+
             Module 2
+
           </span>
+
         </h1>
 
+
         <h2 class="section-title">
+
           UI/UX
-          <span class="accent">DESIGN</span>
+
+          <span class="accent">
+
+            DESIGN
+
+          </span>
+
         </h2>
 
       </div>
 
 
 
-      <div class="projects-grid">
+      <!-- =================================================
+           DAY 01
+           ================================================= -->
+
+      <div class="project-card glass-card">
+
+        <div class="project-body">
+
+          <h2 class="day-heading">
+
+            1. DAY 01 : Introduction to UI/UX Basics
+
+          </h2>
 
 
-        <!-- =====================================
-             PROJECT 1
-             ===================================== -->
+          <div class="bullet-box">
 
-        <div class="project-card glass-card">
+            <ul>
 
-          <div class="project-thumb">
+              <li>Main Heading</li>
 
-            <div class="project-thumb-placeholder">
+              <li>Sub Heading</li>
 
-              <i class="fa-solid fa-image"></i>
+              <li>Smaller Heading</li>
 
-              <img src="tags photo.jpg"
-                value="project1"
-                alt="UI UX Project">
+              <li>Italic Text</li>
 
-              <a href="tags.html">
-                <span>Project Screenshot</span>
-              </a>
+              <li>Paragraph Text</li>
 
-            </div>
+              <li>Underline Text</li>
 
+              <li>Moving Text</li>
 
-            <div class="project-overlay">
+              <li>Breaking Text</li>
 
-              <div class="project-links">
-
-                <a href="tags.html"
-                  class="proj-link"
-                  title="Live Demo">
-
-                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
-
-                </a>
-
-              </div>
-
-            </div>
-
-          </div>
-
-
-
-          <div class="project-body">
-
-            <h1 class="project-title">
-              DAY 01 : Introduction to UI/UX Basics
-            </h1>
-
-
-            <div class="bullet-box">
-
-              <ul>
-
-                <li>Main Heading</li>
-
-                <li>Sub Heading</li>
-
-                <li>Smaller Heading</li>
-
-                <li>Italic Text</li>
-
-                <li>Paragraph Text</li>
-
-                <li>Underline Text</li>
-
-                <li>Moving Text</li>
-
-                <li>Breaking Text</li>
-
-              </ul>
-
-            </div>
+            </ul>
 
           </div>
 
         </div>
-
-
-
-        <!-- =====================================
-             PROJECT 2
-             ===================================== -->
-
-        <div class="project-card glass-card">
-
-          <div class="project-thumb">
-
-            <div class="project-thumb-placeholder">
-
-              <i class="fa-solid fa-image"></i>
-
-              <img src="motu.jpg"
-                value="project2"
-                alt="HTML Anchor Audio Video">
-
-              <a href="Semantic.html">
-                <span>Project Screenshot</span>
-              </a>
-
-            </div>
-
-
-            <div class="project-overlay">
-
-              <div class="project-links">
-
-                <a href="Semantic.html"
-                  class="proj-link"
-                  title="Live Demo">
-
-                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
-
-                </a>
-
-              </div>
-
-            </div>
-
-          </div>
-
-
-
-          <div class="project-body">
-
-            <h3 class="project-title">
-              DAY 02: Add Anchor tag and Audio Video in HTML
-            </h3>
-
-
-            <div class="bullet-box">
-
-              <ul>
-
-                <li>Video Tag</li>
-
-                <li>Audio Tag</li>
-
-                <li>Anchor Tag</li>
-
-              </ul>
-
-            </div>
-
-          </div>
-
-        </div>
-
-
-
-        <!-- =====================================
-             PROJECT 3
-             ===================================== -->
-
-        <div class="project-card glass-card">
-
-          <div class="project-thumb">
-
-            <div class="project-thumb-placeholder">
-
-              <i class="fa-solid fa-image"></i>
-
-              <img src="form.jpg"
-                value="project2"
-                alt="HTML Forms">
-
-              <a href="Form.html">
-                <span>Project Screenshot</span>
-              </a>
-
-            </div>
-
-
-            <div class="project-overlay">
-
-              <div class="project-links">
-
-                <a href="Form.html"
-                  class="proj-link"
-                  title="Live Demo">
-
-                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
-
-                </a>
-
-              </div>
-
-            </div>
-
-          </div>
-
-
-
-          <div class="project-body">
-
-            <h3 class="project-title">
-              DAY 03: Add Forms in HTML
-            </h3>
-
-
-            <div class="bullet-box">
-
-              <ul>
-
-                <li>Password</li>
-
-                <li>Email</li>
-
-                <li>Number</li>
-
-                <li>Telephone</li>
-
-                <li>URL</li>
-
-                <li>Date</li>
-
-                <li>Color</li>
-
-                <li>Range</li>
-
-                <li>Radio Button</li>
-
-                <li>Check Boxes</li>
-
-                <li>Single Dropdown</li>
-
-                <li>Multi-Dropdown</li>
-
-                <li>File Upload</li>
-
-                <li>Textarea</li>
-
-                <li>Button</li>
-
-              </ul>
-
-            </div>
-
-          </div>
-
-        </div>
-
-
-
-        <!-- =====================================
-             PROJECT 4
-             ===================================== -->
-
-        <div class="project-card glass-card">
-
-          <div class="project-thumb">
-
-            <div class="project-thumb-placeholder">
-
-              <i class="fa-solid fa-image"></i>
-
-              <img src="timetable.jpg"
-                value="project1"
-                alt="HTML Table">
-
-              <a href="Time table.html">
-                <span>Project Screenshot</span>
-              </a>
-
-            </div>
-
-
-            <div class="project-overlay">
-
-              <div class="project-links">
-
-                <a href="Time table.html"
-                  class="proj-link"
-                  title="Live Demo">
-
-                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
-
-                </a>
-
-              </div>
-
-            </div>
-
-          </div>
-
-
-
-          <div class="project-body">
-
-            <h1 class="project-title">
-              DAY 04 : Making Table in HTML
-            </h1>
-
-
-            <div class="bullet-box">
-
-              <ul>
-
-                <li>Table Tag</li>
-
-                <li>TR Tag</li>
-
-                <li>TH Tag</li>
-
-                <li>TD Tag</li>
-
-                <li>Caption Tag</li>
-
-                <li>Colspan Tag</li>
-
-                <li>Rowspan Tag</li>
-
-              </ul>
-
-            </div>
-
-          </div>
-
-        </div>
-
-
-
-        <!-- =====================================
-             PROJECT 5
-             ===================================== -->
-
-        <div class="project-card glass-card">
-
-          <div class="project-thumb">
-
-            <div class="project-thumb-placeholder">
-
-              <i class="fa-solid fa-image"></i>
-
-              <img src="css select.jpg"
-                value="project1"
-                alt="CSS Selectors">
-
-              <a href="CSS Selectors.html">
-                <span>Project Screenshot</span>
-              </a>
-
-            </div>
-
-
-            <div class="project-overlay">
-
-              <div class="project-links">
-
-                <a href="CSS Selectors.html"
-                  class="proj-link"
-                  title="Live Demo">
-
-                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
-
-                </a>
-
-              </div>
-
-            </div>
-
-          </div>
-
-
-
-          <div class="project-body">
-
-            <h1 class="project-title">
-              DAY 05 : Adding Header, Nav, Footer with all CSS Selector
-            </h1>
-
-
-            <div class="bullet-box">
-
-              <ul>
-
-                <li>Header</li>
-
-                <li>Navigation</li>
-
-                <li>Element Selector</li>
-
-                <li>Class Selector</li>
-
-                <li>ID Selector</li>
-
-                <li>Universal Selector</li>
-
-                <li>Group Selector</li>
-
-                <li>Attribute Selector</li>
-
-                <li>Pseudo Selector</li>
-
-              </ul>
-
-            </div>
-
-          </div>
-
-        </div>
-
-
-
-        <!-- =====================================
-             PROJECT 6
-             ===================================== -->
-
-        <div class="project-card glass-card">
-
-          <div class="project-thumb">
-
-            <div class="project-thumb-placeholder">
-
-              <i class="fa-solid fa-image"></i>
-
-              <img src="flexbox.jpg"
-                value="project1"
-                alt="CSS Box Model">
-
-              <a href="CSS Box Model.html">
-                <span>Project Screenshot</span>
-              </a>
-
-            </div>
-
-
-            <div class="project-overlay">
-
-              <div class="project-links">
-
-                <a href="CSS Box Model.html"
-                  class="proj-link"
-                  title="Live Demo">
-
-                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
-
-                </a>
-
-              </div>
-
-            </div>
-
-          </div>
-
-
-
-          <div class="project-body">
-
-            <h1 class="project-title">
-              DAY 06 : Adding Box Model, Flexbox
-            </h1>
-
-
-            <div class="bullet-box">
-
-              <ul>
-
-                <li>Content</li>
-
-                <li>Padding</li>
-
-                <li>Border</li>
-
-                <li>Margin</li>
-
-                <li>Height</li>
-
-                <li>Width</li>
-
-                <li>Background Color</li>
-
-              </ul>
-
-            </div>
-
-          </div>
-
-        </div>
-
-
-
-        <!-- =====================================
-             PROJECT 7
-             ===================================== -->
-
-        <div class="project-card glass-card">
-
-          <div class="project-thumb">
-
-            <div class="project-thumb-placeholder">
-
-              <i class="fa-solid fa-image"></i>
-
-              <img src="simplejs.jpg"
-                value="project1"
-                alt="JavaScript Basics">
-
-              <a href="Fab.html">
-                <span>Project Screenshot</span>
-              </a>
-
-            </div>
-
-
-            <div class="project-overlay">
-
-              <div class="project-links">
-
-                <a href="Fab.html"
-                  class="proj-link"
-                  title="Live Demo">
-
-                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
-
-                </a>
-
-              </div>
-
-            </div>
-
-          </div>
-
-
-
-          <div class="project-body">
-
-            <h1 class="project-title">
-              DAY 07 : Javascript basics with all operations
-            </h1>
-
-
-            <div class="bullet-box">
-
-              <ul>
-
-                <li>Sum</li>
-
-                <li>Difference</li>
-
-                <li>Multiply</li>
-
-                <li>Divide</li>
-
-              </ul>
-
-            </div>
-
-          </div>
-
-        </div>
-
-
-
-        <!-- =====================================
-             PROJECT 8
-             ===================================== -->
-
-        <div class="project-card glass-card">
-
-          <div class="project-thumb">
-
-            <div class="project-thumb-placeholder">
-
-              <i class="fa-solid fa-image"></i>
-
-              <img src="todo.jpg"
-                value="project1"
-                alt="To Do List">
-
-              <a href="todolist.html">
-                <span>Project Screenshot</span>
-              </a>
-
-            </div>
-
-
-            <div class="project-overlay">
-
-              <div class="project-links">
-
-                <a href="todolist.html"
-                  class="proj-link"
-                  title="Live Demo">
-
-                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
-
-                </a>
-
-              </div>
-
-            </div>
-
-          </div>
-
-
-
-          <div class="project-body">
-
-            <h1 class="project-title">
-              DAY 08 : To-Do List Project
-            </h1>
-
-
-            <div class="bullet-box">
-
-              <ul>
-
-                <li>Adding Task</li>
-
-                <li>Button Click</li>
-
-                <li>Display List</li>
-
-                <li>Delete Option</li>
-
-              </ul>
-
-            </div>
-
-          </div>
-
-        </div>
-
 
       </div>
 
 
-      <!-- =====================================
+
+      <!-- =================================================
+           DAY 02
+           ================================================= -->
+
+      <div class="project-card glass-card">
+
+        <div class="project-body">
+
+          <h2 class="day-heading">
+
+            2. DAY 02 : Add Anchor Tag and Audio Video in HTML
+
+          </h2>
+
+
+          <div class="bullet-box">
+
+            <ul>
+
+              <li>Video Tag</li>
+
+              <li>Audio Tag</li>
+
+              <li>Anchor Tag</li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- =================================================
+           DAY 03
+           ================================================= -->
+
+      <div class="project-card glass-card">
+
+        <div class="project-body">
+
+          <h2 class="day-heading">
+
+            3. DAY 03 : Add Forms in HTML
+
+          </h2>
+
+
+          <div class="bullet-box">
+
+            <ul>
+
+              <li>Password</li>
+
+              <li>Email</li>
+
+              <li>Number</li>
+
+              <li>Telephone</li>
+
+              <li>URL</li>
+
+              <li>Date</li>
+
+              <li>Color</li>
+
+              <li>Range</li>
+
+              <li>Radio Button</li>
+
+              <li>Check Boxes</li>
+
+              <li>Single Dropdown</li>
+
+              <li>Multi-Dropdown</li>
+
+              <li>File Upload</li>
+
+              <li>Textarea</li>
+
+              <li>Button</li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- =================================================
+           DAY 04
+           ================================================= -->
+
+      <div class="project-card glass-card">
+
+        <div class="project-body">
+
+          <h2 class="day-heading">
+
+            4. DAY 04 : Making Table in HTML
+
+          </h2>
+
+
+          <div class="bullet-box">
+
+            <ul>
+
+              <li>Table Tag</li>
+
+              <li>TR Tag</li>
+
+              <li>TH Tag</li>
+
+              <li>TD Tag</li>
+
+              <li>Caption Tag</li>
+
+              <li>Colspan Tag</li>
+
+              <li>Rowspan Tag</li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- =================================================
+           DAY 05
+           ================================================= -->
+
+      <div class="project-card glass-card">
+
+        <div class="project-body">
+
+          <h2 class="day-heading">
+
+            5. DAY 05 : Adding Header, Nav, Footer with CSS Selectors
+
+          </h2>
+
+
+          <div class="bullet-box">
+
+            <ul>
+
+              <li>Header</li>
+
+              <li>Navigation</li>
+
+              <li>Element Selector</li>
+
+              <li>Class Selector</li>
+
+              <li>ID Selector</li>
+
+              <li>Universal Selector</li>
+
+              <li>Group Selector</li>
+
+              <li>Attribute Selector</li>
+
+              <li>Pseudo Selector</li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- =================================================
+           DAY 06
+           ================================================= -->
+
+      <div class="project-card glass-card">
+
+        <div class="project-body">
+
+          <h2 class="day-heading">
+
+            6. DAY 06 : Adding Box Model, Flexbox
+
+          </h2>
+
+
+          <div class="bullet-box">
+
+            <ul>
+
+              <li>Content</li>
+
+              <li>Padding</li>
+
+              <li>Border</li>
+
+              <li>Margin</li>
+
+              <li>Height</li>
+
+              <li>Width</li>
+
+              <li>Background Color</li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- =================================================
+           DAY 07
+           ================================================= -->
+
+      <div class="project-card glass-card">
+
+        <div class="project-body">
+
+          <h2 class="day-heading">
+
+            7. DAY 07 : JavaScript Basics with All Operations
+
+          </h2>
+
+
+          <div class="bullet-box">
+
+            <ul>
+
+              <li>Sum</li>
+
+              <li>Difference</li>
+
+              <li>Multiply</li>
+
+              <li>Divide</li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- =================================================
+           DAY 08
+           ================================================= -->
+
+      <div class="project-card glass-card">
+
+        <div class="project-body">
+
+          <h2 class="day-heading">
+
+            8. DAY 08 : To-Do List Project
+
+          </h2>
+
+
+          <div class="bullet-box">
+
+            <ul>
+
+              <li>Adding Task</li>
+
+              <li>Button Click</li>
+
+              <li>Display List</li>
+
+              <li>Delete Option</li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- =================================================
            MENTORS
-           ===================================== -->
+           ================================================= -->
 
       <br>
       <br>
+
 
       <center>
 
@@ -874,8 +714,11 @@
   </section>
 
 
+
   <!-- JavaScript -->
+
   <script src="script.js"></script>
+
 
 </body>
 

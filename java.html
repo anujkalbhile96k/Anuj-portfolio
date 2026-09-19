@@ -1,9 +1,552 @@
-<html>
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
 <head>
-    <title> Java </title>
+
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Anuj Krushna Kalbhile | CSE Portfolio</title>
+
+
+  <!-- Google Fonts: Syne + DM Sans -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap"
+    rel="stylesheet"
+  />
+
+
+  <!-- Font Awesome -->
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+
+
+  <!-- Main Stylesheet -->
+
+  <link rel="stylesheet" href="style.css">
+
+
+  <!-- =====================================================
+       BULLET BOX CSS
+       ===================================================== -->
+
+  <style>
+
+    /* Main bullet container */
+
+    .bullet-box {
+
+      width: 100%;
+
+      box-sizing: border-box;
+
+      padding: 22px 28px;
+
+      margin-top: 20px;
+
+      background: rgba(20, 25, 35, 0.95);
+
+      border: 2px solid #2389e8;
+
+      border-radius: 10px;
+
+      box-shadow:
+        0 0 15px rgba(35, 137, 232, 0.20);
+
+    }
+
+
+    /* Remove default list styling */
+
+    .bullet-box ul {
+
+      list-style: none;
+
+      padding: 0;
+
+      margin: 0;
+
+    }
+
+
+    /* Individual bullet item */
+
+    .bullet-box li {
+
+      position: relative;
+
+      padding: 14px 18px 14px 42px;
+
+      margin: 10px 0;
+
+      background: #0879d9;
+
+      border: 1px solid #4db5ff;
+
+      border-radius: 6px;
+
+      color: white;
+
+      font-size: 17px;
+
+      font-weight: 500;
+
+      line-height: 1.5;
+
+      transition: 0.3s ease;
+
+    }
+
+
+    /* Bullet symbol */
+
+    .bullet-box li::before {
+
+      content: "•";
+
+      position: absolute;
+
+      left: 18px;
+
+      top: 50%;
+
+      transform: translateY(-50%);
+
+      font-size: 25px;
+
+      font-weight: bold;
+
+      color: white;
+
+    }
+
+
+    /* Hover effect */
+
+    .bullet-box li:hover {
+
+      transform: translateX(5px);
+
+      background: #096fc4;
+
+      box-shadow:
+        0 0 10px rgba(77, 181, 255, 0.35);
+
+    }
+
+
+    /* Numbered heading */
+
+    .day-heading {
+
+      font-size: 26px;
+
+      font-weight: 700;
+
+      margin-top: 25px;
+
+      margin-bottom: 10px;
+
+      line-height: 1.3;
+
+    }
+
+
+    /* Mobile responsive */
+
+    @media (max-width: 600px) {
+
+      .bullet-box {
+
+        padding: 15px;
+
+      }
+
+      .bullet-box li {
+
+        font-size: 15px;
+
+        padding: 12px 14px 12px 35px;
+
+      }
+
+      .bullet-box li::before {
+
+        left: 12px;
+
+      }
+
+      .day-heading {
+
+        font-size: 21px;
+
+      }
+
+    }
+
+  </style>
+
 </head>
+
+
 <body>
-    <h1>Java Module</h1>
-    <p>Here is the documentation of HTML, CSS, JavaScript...</p>
+
+
+  <!-- =====================================================
+       NAVBAR
+       ===================================================== -->
+
+  <nav class="navbar" id="navbar">
+
+
+    <div class="nav-brand">
+
+      <a href="index.html" class="nav-logo-link">
+
+        <img
+          src="Fablab logo.png"
+          alt="Anuj Kalbhile Logo"
+          class="nav-logo-img"
+          onerror="this.style.display='none';"
+        >
+
+
+        <h3>
+
+          Digital
+          <br>
+
+          Fablab
+          <br>
+
+          SSGMCE
+
+          <span class="accent"></span>
+
+        </h3>
+
+      </a>
+
+    </div>
+
+
+
+    <div class="nav-actions">
+
+
+      <!-- Dark / Light Mode Toggle -->
+
+      <button
+        class="theme-toggle"
+        id="themeToggle"
+        aria-label="Toggle theme"
+      >
+
+        <span class="toggle-icon sun">
+
+          <i class="fa-solid fa-sun"></i>
+
+        </span>
+
+
+        <span class="toggle-icon moon">
+
+          <i class="fa-solid fa-moon"></i>
+
+        </span>
+
+      </button>
+
+
+
+      <!-- Hamburger Menu -->
+
+      <button
+        class="hamburger"
+        id="hamburger"
+        aria-label="Open menu"
+      >
+
+        <span></span>
+
+        <span></span>
+
+        <span></span>
+
+      </button>
+
+
+    </div>
+
+  </nav>
+
+
+
+  <!-- =====================================================
+       UI / UX PROJECT SECTION
+       ===================================================== -->
+
+  <section class="projects section" id="projects">
+
+
+    <div class="container">
+
+
+      <!-- Main Section Heading -->
+
+      <div class="section-header">
+
+        <h1>
+
+          <span class="section-tag">
+
+            Module 2
+
+          </span>
+
+        </h1>
+
+
+        <h2 class="section-title">
+
+          JAVA
+
+          <span class="accent">
+
+            Programming
+
+          </span>
+
+        </h2>
+
+      </div>
+
+
+
+      <!-- =================================================
+           DAY 01
+           ================================================= -->
+
+      <div class="project-card glass-card">
+
+        <div class="project-body">
+
+          <h2 class="day-heading">
+
+            1. DAY 01 :  Introduction to Programming & Java Basics
+          </h2>
+
+
+          <div class="bullet-box">
+
+            <ul>
+             <li>Learn what programming is and get introduced to Java - its features, how it works via the JVM, and the structure of a basic Java program.</li>
+              
+              <li>Java Features : High-level , Object-oriented, Secure, Reliable, Platform-independent</li>
+
+              <li>Java Uses: Android/Mobile Apps, Web Backends, Enterprise Systems, Desktop Applications</li>
+
+              <li>Key Concepts: WORA ,JDK, JVM, class, main(), static, void, String[] args, print() vs println()</li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- =================================================
+           DAY 02
+           ================================================= -->
+
+      <div class="project-card glass-card">
+
+        <div class="project-body">
+
+          <h2 class="day-heading">
+
+            2. DAY 02 :  Variables, Data Types & Operators 
+
+          </h2>
+
+
+          <div class="bullet-box">
+
+            <ul>
+              <li>Learn how to store data using variables, take user input with Scanner, and perform operations using Java's operators.</li>
+
+              <li>Data Types : int, float, double, char, boolean ,String</li>
+
+              <li>Scanner Methods: nextInt(), nextDouble(), nextFloat(), next(), nextLine(), nextBoolean()</li>
+
+              <li>Operators : Arithmetic, Relational, Logical, Increment/Decrement</li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- =================================================
+           DAY 03
+           ================================================= -->
+
+      <div class="project-card glass-card">
+
+        <div class="project-body">
+
+          <h2 class="day-heading">
+
+            3. DAY 03 : Operators & Conditional Statements
+
+          </h2>
+
+
+          <div class="bullet-box">
+
+            <ul>
+              <li>Go deeper into all types of Java operators and learn how a program can make decisions using conditional statements</li>
+
+              <li>Types of Operators : Arithmetic (+ - * / %), Relational (== != > < >= <=), Logical (&& || !), Assignment (= += -= *= /= %=), Unary (++ -- + - ! ~), Bitwise (& | ^ ~), Shift (<< >> >>>), Ternary (? :)</li>
+
+              <li>Conditional Statements: if, if-else, if-else-if ladder, Nested if, switch</li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- =================================================
+           DAY 04
+           ================================================= -->
+
+      <div class="project-card glass-card">
+
+        <div class="project-body">
+
+          <h2 class="day-heading">
+
+            4. DAY 04 : OOP Basics: Class, Object & Constructor
+
+          </h2>
+
+
+          <div class="bullet-box">
+
+            <ul>
+              <li>Get introduced to Object-Oriented Programming in Java through its core building blocks - class, attributes, methods, objects and constructors.</li>
+
+              <li>OOP Building Blocks: Class, Attributes, Method, Object, Constructor</li>
+              
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+                <!-- =================================================
+           DAY 05
+           ================================================= -->
+
+      <div class="project-card glass-card">
+
+        <div class="project-body">
+
+          <h2 class="day-heading">
+
+            5. DAY 05 : The Four Pillars of OOP
+
+          </h2>
+
+
+          <div class="bullet-box">
+
+            <ul>
+              <li>Learn the four core pillars of Object-Oriented Programming - Encapsulation, Inheritance, Polymorphism and Abstraction - with real-world examples.</li>
+
+              <li>Encapsulation: private, public, Getters, Setters</li>
+
+              <li>Inheritance : extends keyword, super keyword,, Code Reusability, Single Inheritance Only</li>
+
+              <li>Polymorphism : Method Overloading (compile-time), Method Overriding (runtime)</li>
+
+              <li>Abstraction : abstract keyword, interface, implements, Abstract Class, Interface</li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+     
+
+
+      <!-- =================================================
+           MENTORS
+           ================================================= -->
+
+      <br>
+      <br>
+
+
+      <center>
+
+        <span class="btn btn-primary">
+
+          Mentors:
+
+          <br>
+
+          1. Kamran Sir
+
+          <br>
+
+          2. Saloni  Mam
+
+        </span>
+
+      </center>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- JavaScript -->
+
+  <script src="script.js"></script>
+
+
 </body>
+
 </html>

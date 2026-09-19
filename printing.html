@@ -1,9 +1,589 @@
-<html>
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
 <head>
-    <title>3D printing</title>
+
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Anuj Krushna Kalbhile | CSE Portfolio</title>
+
+
+  <!-- Google Fonts: Syne + DM Sans -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap"
+    rel="stylesheet"
+  />
+
+
+  <!-- Font Awesome -->
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+
+
+  <!-- Main Stylesheet -->
+
+  <link rel="stylesheet" href="style.css">
+
+
+  <!-- =====================================================
+       BULLET BOX CSS
+       ===================================================== -->
+
+  <style>
+
+    /* Main bullet container */
+
+    .bullet-box {
+
+      width: 100%;
+
+      box-sizing: border-box;
+
+      padding: 22px 28px;
+
+      margin-top: 20px;
+
+      background: rgba(20, 25, 35, 0.95);
+
+      border: 2px solid #2389e8;
+
+      border-radius: 10px;
+
+      box-shadow:
+        0 0 15px rgba(35, 137, 232, 0.20);
+
+    }
+
+
+    /* Remove default list styling */
+
+    .bullet-box ul {
+
+      list-style: none;
+
+      padding: 0;
+
+      margin: 0;
+
+    }
+
+
+    /* Individual bullet item */
+
+    .bullet-box li {
+
+      position: relative;
+
+      padding: 14px 18px 14px 42px;
+
+      margin: 10px 0;
+
+      background: #0879d9;
+
+      border: 1px solid #4db5ff;
+
+      border-radius: 6px;
+
+      color: white;
+
+      font-size: 17px;
+
+      font-weight: 500;
+
+      line-height: 1.5;
+
+      transition: 0.3s ease;
+
+    }
+
+
+    /* Bullet symbol */
+
+    .bullet-box li::before {
+
+      content: "•";
+
+      position: absolute;
+
+      left: 18px;
+
+      top: 50%;
+
+      transform: translateY(-50%);
+
+      font-size: 25px;
+
+      font-weight: bold;
+
+      color: white;
+
+    }
+
+
+    /* Hover effect */
+
+    .bullet-box li:hover {
+
+      transform: translateX(5px);
+
+      background: #096fc4;
+
+      box-shadow:
+        0 0 10px rgba(77, 181, 255, 0.35);
+
+    }
+
+
+    /* Numbered heading */
+
+    .day-heading {
+
+      font-size: 26px;
+
+      font-weight: 700;
+
+      margin-top: 25px;
+
+      margin-bottom: 10px;
+
+      line-height: 1.3;
+
+    }
+
+
+    /* Mobile responsive */
+
+    @media (max-width: 600px) {
+
+      .bullet-box {
+
+        padding: 15px;
+
+      }
+
+      .bullet-box li {
+
+        font-size: 15px;
+
+        padding: 12px 14px 12px 35px;
+
+      }
+
+      .bullet-box li::before {
+
+        left: 12px;
+
+      }
+
+      .day-heading {
+
+        font-size: 21px;
+
+      }
+
+    }
+
+  </style>
+
 </head>
+
+
 <body>
-    <h1>3D printing Module</h1>
-    <p>Here is the documentation of HTML, CSS, JavaScript...</p>
+
+
+  <!-- =====================================================
+       NAVBAR
+       ===================================================== -->
+
+  <nav class="navbar" id="navbar">
+
+
+    <div class="nav-brand">
+
+      <a href="index.html" class="nav-logo-link">
+
+        <img
+          src="Fablab logo.png"
+          alt="Anuj Kalbhile Logo"
+          class="nav-logo-img"
+          onerror="this.style.display='none';"
+        >
+
+
+        <h3>
+
+          Digital
+          <br>
+
+          Fablab
+          <br>
+
+          SSGMCE
+
+          <span class="accent"></span>
+
+        </h3>
+
+      </a>
+
+    </div>
+
+
+
+    <div class="nav-actions">
+
+
+      <!-- Dark / Light Mode Toggle -->
+
+      <button
+        class="theme-toggle"
+        id="themeToggle"
+        aria-label="Toggle theme"
+      >
+
+        <span class="toggle-icon sun">
+
+          <i class="fa-solid fa-sun"></i>
+
+        </span>
+
+
+        <span class="toggle-icon moon">
+
+          <i class="fa-solid fa-moon"></i>
+
+        </span>
+
+      </button>
+
+
+
+      <!-- Hamburger Menu -->
+
+      <button
+        class="hamburger"
+        id="hamburger"
+        aria-label="Open menu"
+      >
+
+        <span></span>
+
+        <span></span>
+
+        <span></span>
+
+      </button>
+
+
+    </div>
+
+  </nav>
+
+
+
+  <!-- =====================================================
+       UI / UX PROJECT SECTION
+       ===================================================== -->
+
+  <section class="projects section" id="projects">
+
+
+    <div class="container">
+
+
+      <!-- Main Section Heading -->
+
+      <div class="section-header">
+
+        <h1>
+
+          <span class="section-tag">
+
+            Module 2
+
+          </span>
+
+        </h1>
+
+
+        <h2 class="section-title">
+
+          Computer Aided
+
+          <span class="accent">
+
+            Designing
+
+          </span>
+
+        </h2>
+
+      </div>
+
+
+
+      <!-- =================================================
+           DAY 01
+           ================================================= -->
+
+      <div class="project-card glass-card">
+
+        <div class="project-body">
+
+          <h2 class="day-heading">
+
+            1. DAY 01 : Sketching Basics
+          </h2>
+
+
+          <div class="bullet-box">
+
+            <ul>
+             <li>Learnt the basics of 2D sketching in CAD - selecting planes and views, and using various sketch tools that form the foundation of every 3D model.</li>
+              
+              <li>Sketch Tools : Line, Midpoint Line, Circle, Arc, Rectangle, Polygon , Spline, Slot , Ellipse, Mirror, Circular
+              Pattern, Rectangular Pattern, Text</li>
+
+              <li>Modify Tools : Fillet, Chamfer, Offset, Trim, Break, Extend</li>
+
+              <li>Constraints : Horizontal/Vertical, Coincident, Equal, Parallel,  Perpendicular, Collinear, Cocentric</li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- =================================================
+           DAY 02
+           ================================================= -->
+
+      <div class="project-card glass-card">
+
+        <div class="project-body">
+
+          <h2 class="day-heading">
+
+            2. DAY 02 : Sketch Practice
+
+          </h2>
+
+
+          <div class="bullet-box">
+
+            <ul>
+              <li>Practiced the sketching tools learnt on Day 1 to build speed and accuracy before moving to 3D modeling.</li>
+
+              <li>Focused entirely on practicing sketches to strengthen fundamentals before moving on to 3D features like extrusion</li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- =================================================
+           DAY 03
+           ================================================= -->
+
+      <div class="project-card glass-card">
+
+        <div class="project-body">
+
+          <h2 class="day-heading">
+
+            3. DAY 03 :  Extruding
+
+          </h2>
+
+
+          <div class="bullet-box">
+
+            <ul>
+              <li>Learnt how to convert 2D sketches into 3D solid bodies using the Extrude feature, along with creating and grounding components.</li>
+
+              <li>Extrude - Start : Profile (selects whole plane), Offset (creates a similar body), Object (extrudes from a surface)</li>
+
+              <li>Extrude - Operation : Join, Cut, Intersect, New Body, New Component </li>
+
+              <li>The Modify section in 3D works similarly to sketching. Also learnt how to create a component and how to ground/unground it.</li>
+                
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- =================================================
+           DAY 04
+           ================================================= -->
+
+      <div class="project-card glass-card">
+
+        <div class="project-body">
+
+          <h2 class="day-heading">
+
+            4. DAY 04 : Assembly, Fasteners & Embossing
+
+          </h2>
+
+
+          <div class="bullet-box">
+
+            <ul>
+              <li>Learnt how to assemble multiple components with motion, model nuts and bolts, and emboss text onto a surface.</li>
+
+              <li>Assembling : Join (J command), Position, Motion, Fix Component </li>
+
+              <li>Fasteners : Bolt - External Threading, Nut - Internal Threading, Standard Units</li>
+
+              
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+        <!-- =================================================
+           DAY 05
+           ================================================= -->
+
+      <div class="project-card glass-card">
+
+        <div class="project-body">
+
+          <h2 class="day-heading">
+
+            5. DAY 05 : Assembly & Motion
+
+          </h2>
+
+
+          <div class="bullet-box">
+
+            <ul>
+              <li>Went deeper into assemblies - understanding the difference between components and bodies, and adding real-world motion using joints.</li>
+
+              <li>Concepts: Components vs Bodies, Joint Tool, Motion Study </li>
+
+              <li>Practice: created a simple hinge mechanism to apply the Joint tool and Motion study concepts.</li>
+
+              
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+        <!-- =================================================
+           DAY 06
+           ================================================= -->
+
+      <div class="project-card glass-card">
+
+        <div class="project-body">
+
+          <h2 class="day-heading">
+
+            6. DAY 06 : Engineering Practice
+
+          </h2>
+
+
+          <div class="bullet-box">
+
+            <ul>
+              <li>Modeled real engineering parts and learnt tools to measure and inspect a design for accuracy.</li>
+
+              <li>Parts Created: Spur Gear (basic),  Plate with Holes </li>
+
+              <li>Tools Learnt: Measure Tool, Inspect</li>
+
+              
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+
+     
+
+
+      <!-- =================================================
+           MENTORS
+           ================================================= -->
+
+      <br>
+      <br>
+
+
+      <center>
+
+        <span class="btn btn-primary">
+
+          Mentors:
+
+          <br>
+
+          1. Vinit Sir
+
+          <br>
+
+          2. Renuka Raut  Mam
+
+        </span>
+
+      </center>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- JavaScript -->
+
+  <script src="script.js"></script>
+
+
 </body>
+
 </html>
